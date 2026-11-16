@@ -1,0 +1,806 @@
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gOuro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8F6A36"/><stop offset=".45" stop-color="#D8B87F"/><stop offset="1" stop-color="#A47E45"/></linearGradient>
+    <symbol id="simbolo" viewBox="0 0 100 100">
+      <path d="M6 27V6h21M73 6h21v21M94 73v21H73M27 94H6V73" fill="none" stroke="url(#gOuro)" stroke-width="4.5"/>
+      <path d="M28 77V38Q28 23 42 23L54 77Z" fill="currentColor"/>
+      <path d="M72 23V62Q72 77 58 77L46 23Z" fill="url(#gOuro)"/>
+    </symbol>
+    <symbol id="palavra" viewBox="0 -1 104 18"><g fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="miter"><path d="M1 16V0l12 16V0"/><circle cx="27" cy="8" r="7.6"/><path d="M41 16V0h6.2a4.4 4.4 0 0 1 0 8.8H41M46.5 8.8L53 16"/><path d="M57 16L64 0l7 16"/><path d="M75 16V0h6.2a4.4 4.4 0 0 1 0 8.8H75M80.5 8.8L87 16"/><path d="M90 0.7h13M96.5 0.7V16"/></g></symbol>
+    <symbol id="i-seta" viewBox="0 0 16 16"><path d="M4 12L12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.5 10.5 0 0 1-1.8-6C5 9.7 9.9 4.9 16 4.9s11 4.8 11 10.8-4.9 10.7-11 10.7zm6-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-1.8-1-2.5-.3-.7-.5-.6-.8-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.4z"/></symbol>
+    <symbol id="i-sacola" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.2" d="M5 8h14l-1 12H6L5 8zM9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-quadro" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="8" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+    <symbol id="i-esq" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" d="M15 5l-7 7 7 7"/></symbol>
+    <symbol id="i-dir" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" d="M9 5l7 7-7 7"/></symbol>
+    <symbol id="i-envio" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.2" d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-arrasta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></symbol>
+  </defs>
+</svg>
+
+<header class="topo" id="topo">
+  <div class="wrap topo__in">
+    <a class="marca" href="#inicio" aria-label="Norart Molduras, vidros e decoração, página inicial">
+      <svg class="simbolo" aria-hidden="true"><use href="#simbolo"/></svg>
+      <span class="palavra"><svg viewBox="0 -1 104 18" aria-hidden="true"><use href="#palavra"/></svg><small>molduras, vidros e decoração</small></span>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#inicio" data-nav="inicio">Início</a>
+      <a href="#produtos" data-nav="produtos">Produtos</a>
+      <a href="#provador" data-nav="provador">Provador</a>
+      <a href="#projetos" data-nav="projetos">Projetos</a>
+      <a href="#sobre" data-nav="sobre">Sobre</a>
+      <a href="#contato" data-nav="contato">Contato</a>
+    </nav>
+    <a class="btn btn--escuro btn--sm topo__cta" href="#contato">Pedir orçamento</a>
+    <button class="icone-btn" id="abrirPedido" type="button" aria-label="Abrir meu pedido" aria-controls="gaveta"><svg aria-hidden="true"><use href="#i-sacola"/></svg><span class="badge" id="pedidoN" data-n="0">0</span></button>
+    <button class="icone-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menuMobile" aria-label="Abrir menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="menu-mobile" id="menuMobile" aria-label="Menu" hidden>
+  <a href="#inicio"><small>01</small>Início</a>
+  <a href="#produtos"><small>02</small>Produtos</a>
+  <a href="#provador"><small>03</small>Provador</a>
+  <a href="#projetos"><small>04</small>Projetos</a>
+  <a href="#sobre"><small>05</small>Sobre</a>
+  <a href="#contato"><small>06</small>Contato</a>
+  <a class="btn btn--escuro" href="#contato">Pedir orçamento</a>
+</nav>
+
+<main id="conteudo">
+
+<!-- ================= INÍCIO ================= -->
+<div class="vista" data-vista="inicio">
+  <section class="hero" aria-label="Apresentação">
+    <div class="hero__foto"><img src="img/hero-claro.jpg" alt="Sala clara com obra de arte em moldura dourada fina e passe-partout branco" fetchpriority="high"></div>
+    <div class="hero__veu" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero__texto">
+        <p class="rotulo sobe">Asa Sul · Brasília · desde 1998</p>
+        <h1 class="h1 linhas"><span><span>Sua obra merece</span></span><span><span>uma moldura</span></span><span><span><em>à altura.</em></span></span></h1>
+        <p class="lead sobe">Molduras e vidros sob medida, com orientação personalizada do primeiro olhar à instalação.</p>
+        <div class="hero__acoes sobe">
+          <a class="btn btn--escuro" href="#produtos">Ver produtos <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+          <a class="link" href="#provador" data-rolar="secProvHome">Provar na parede <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <a class="destaque" id="destaque" href="#produto-barroca">
+      <div class="destaque__img"><img id="destaqueImg" src="img/molduras/barroca.jpg" alt=""></div>
+      <div>
+        <small>Em destaque</small>
+        <b id="destaqueNome">Barroca Ouro Velho</b>
+        <span id="destaqueInfo">Perfil 9 cm · Clássica</span>
+        <div class="destaque__pontos" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+      </div>
+    </a>
+    <div class="hero__base">
+      <div class="wrap"><ul class="hero__cats sobe"><li>Molduras</li><li>Vidros</li><li>Espelhos</li><li>Instalação</li></ul></div>
+    </div>
+  </section>
+
+  <section class="numeros-faixa" aria-label="A Norart em números">
+    <div class="wrap numeros-faixa__grade">
+      <div class="rv"><b><span data-conta="28" id="anosNorart">28</span> anos</b><span>de oficina e balcão na Asa Sul, atendendo Brasília desde 1998.</span></div>
+      <div class="rv" style="--d:.08s"><b>45°</b><span>Cantos cortados e unidos com precisão, peça por peça.</span></div>
+      <div class="rv" style="--d:.16s"><b>Sob medida</b><span>Do porta-retrato ao painel de espelho de parede inteira.</span></div>
+      <div class="rv" style="--d:.24s"><b>Vidro museu</b><span>Antirreflexo e com filtro UV para obras e fotografias de valor.</span></div>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="wrap">
+      <div class="cab">
+        <p class="rotulo rv">A Norart</p>
+        <div>
+          <h2 class="h2 rv">Do primeiro olhar <em>à obra na parede.</em></h2>
+          <p class="lead rv" style="--d:.1s">Analisamos o ambiente, o estilo da peça e as proporções antes de indicar a moldura. Depois produzimos sob medida e instalamos com cuidado.</p>
+        </div>
+      </div>
+      <ol class="passos">
+        <li class="rv"><span class="traco rv-linha"></span><b>Orientação</b><span>Ambiente, estilo da peça e proporções analisados com você.</span></li>
+        <li class="rv" style="--d:.12s"><span class="traco rv-linha" style="--d:.12s"></span><b>Projeto</b><span>Perfil, passe-partout, vidro e medidas finais definidos juntos.</span></li>
+        <li class="rv" style="--d:.24s"><span class="traco rv-linha" style="--d:.24s"></span><b>Produção</b><span>Corte a 45° e acabamento artesanal na nossa oficina.</span></li>
+        <li class="rv" style="--d:.36s"><span class="traco rv-linha" style="--d:.36s"></span><b>Instalação</b><span>Transporte, alinhamento e posicionamento no seu espaço.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="secao--curta" style="padding-top:0">
+    <div class="wrap ladrilhos">
+      <a class="ladrilho rv-img" href="#produtos" data-filtro="molduras"><img src="img/real/amostras-parede.jpg" alt="Parede de amostras de molduras na loja" loading="lazy"><span>Molduras <svg aria-hidden="true"><use href="#i-seta"/></svg></span></a>
+      <a class="ladrilho rv-img" style="--d:.1s" href="#produtos" data-filtro="vidros"><img src="img/cat-vidros.jpg" alt="Vitrine com prateleiras de vidro" loading="lazy"><span>Vidros <svg aria-hidden="true"><use href="#i-seta"/></svg></span></a>
+      <a class="ladrilho rv-img" style="--d:.2s" href="#produtos" data-filtro="vidros"><img src="img/cat-espelhos.jpg" alt="Espelho orgânico com iluminação" loading="lazy"><span>Espelhos <svg aria-hidden="true"><use href="#i-seta"/></svg></span></a>
+      <a class="ladrilho rv-img" style="--d:.3s" href="#sobre"><img src="img/real/instalacao.jpg" alt="Equipe Norart instalando uma fotografia emoldurada" loading="lazy"><span>Instalação <svg aria-hidden="true"><use href="#i-seta"/></svg></span></a>
+    </div>
+  </section>
+
+  <section class="secao areia">
+    <div class="wrap">
+      <div class="cab">
+        <div>
+          <p class="rotulo rv">Seleção</p>
+          <h2 class="h2 rv">Molduras para <em>cada obra.</em></h2>
+        </div>
+        <a class="link cab__acao rv" href="#produtos">Ver todas as molduras <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+      </div>
+      <div class="produtos" id="selecaoHome"></div>
+    </div>
+  </section>
+
+  <section class="manifesto" aria-label="Manifesto Norart">
+    <div class="wrap manifesto__in rv">
+      <svg class="manifesto__selo" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="aroManifesto" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><g class="manifesto__giro"><text font-family="Jost,Arial,sans-serif" font-size="12.5" font-weight="500" letter-spacing="2" fill="#5B4131"><textPath href="#aroManifesto" textLength="498" lengthAdjust="spacing">DESDE 1998 · NORART · MOLDURAS · VIDROS · DECORAÇÃO ·</textPath></text></g><circle cx="100" cy="100" r="60" fill="none" stroke="#D8CEC1"/><use href="#simbolo" x="72" y="72" width="56" height="56" style="color:#1F1B17"/></svg>
+      <h2 class="manifesto__txt">Não é sobre escolher uma moldura.<br>É sobre como a sua obra <span class="circulo"><em>será percebida.</em></span></h2>
+      <p class="manifesto__assina">Norart · Molduras, vidros e decoração</p>
+    </div>
+  </section>
+
+  <section class="secao" id="secProvHome">
+    <div class="wrap">
+      <div class="cab">
+        <div>
+          <p class="rotulo rv">Provador de molduras</p>
+          <h2 class="h2 rv">Veja a moldura na parede <em>antes de encomendar.</em></h2>
+        </div>
+        <p class="lead rv" style="--d:.1s">Envie a foto da sua obra e combine moldura, passe-partout, vidro e tamanho. A simulação respeita as medidas reais do ambiente.</p>
+      </div>
+      <div class="slot-provador rv" data-slot="inicio"></div>
+    </div>
+  </section>
+
+  <section class="secao faixa-marrom">
+    <div class="wrap">
+      <p class="rotulo rv">Nosso diferencial</p>
+      <h2 class="h2 rv" style="max-width:18ch">Não vendemos apenas <em>molduras.</em></h2>
+      <p class="lead rv" style="--d:.1s">Antes de indicar qualquer perfil, analisamos cinco pontos da sua peça e do lugar onde ela vai ficar.</p>
+      <ul class="analise">
+        <li class="rv"><small>01</small>Ambiente</li>
+        <li class="rv" style="--d:.08s"><small>02</small>Estilo da peça</li>
+        <li class="rv" style="--d:.16s"><small>03</small>Proporções</li>
+        <li class="rv" style="--d:.24s"><small>04</small>Materiais</li>
+        <li class="rv" style="--d:.32s"><small>05</small>Acabamento</li>
+      </ul>
+      <p class="citacao rv">A melhor moldura nem sempre é a mais bonita sozinha. É a que melhor valoriza a obra.</p>
+    </div>
+  </section>
+
+  <section class="secao mitos-secao">
+    <div class="wrap">
+      <div class="cab">
+        <div><p class="rotulo rv">Guia Norart</p><h2 class="h2 rv">Mito ou <em>verdade?</em></h2></div>
+        <p class="lead rv" style="--d:.1s">Quatro ideias comuns sobre molduras. Toque nos cartões para descobrir a resposta.</p>
+      </div>
+      <div class="mitos-grade">
+        <button class="mito rv" type="button" aria-pressed="false"><span class="mito__in">
+          <span class="mito__face mito__frente"><small>01</small><q>Moldura grande e rebuscada sempre deixa a obra mais sofisticada.</q><i>Toque para virar</i></span>
+          <span class="mito__face mito__verso"><b class="m">Mito</b><span>O que define o resultado é a proporção. Em muitas obras um filete fino valoriza mais do que um entalhe pesado, que acaba competindo com a imagem.</span></span>
+        </span></button>
+        <button class="mito rv" style="--d:.08s" type="button" aria-pressed="false"><span class="mito__in">
+          <span class="mito__face mito__frente"><small>02</small><q>O passe-partout ajuda a obra a respirar.</q><i>Toque para virar</i></span>
+          <span class="mito__face mito__verso"><b class="v">Verdade</b><span>A margem em volta da imagem cria uma pausa visual, conduz o olhar para o centro e evita que o vidro encoste na obra.</span></span>
+        </span></button>
+        <button class="mito rv" style="--d:.16s" type="button" aria-pressed="false"><span class="mito__in">
+          <span class="mito__face mito__frente"><small>03</small><q>Todo vidro de quadro é igual.</q><i>Toque para virar</i></span>
+          <span class="mito__face mito__verso"><b class="m">Mito</b><span>O vidro comum reflete a luz do ambiente. O antirreflexo deixa a leitura nítida e o vidro museu ainda filtra os raios UV que desbotam as cores.</span></span>
+        </span></button>
+        <button class="mito rv" style="--d:.24s" type="button" aria-pressed="false"><span class="mito__in">
+          <span class="mito__face mito__frente"><small>04</small><q>A cor da moldura pode mudar a percepção das cores da obra.</q><i>Toque para virar</i></span>
+          <span class="mito__face mito__verso"><b class="v">Verdade</b><span>Tons quentes realçam amarelos e terrosos, tons frios destacam azuis e cinzas. Por isso testamos as amostras ao lado da obra antes de cortar.</span></span>
+        </span></button>
+      </div>
+      <p class="mitos__placar" id="mitosPlacar" aria-live="polite"><span><b id="mitosN">0</b> de 4 descobertos</span><span class="mitos__barra"><i id="mitosBarra"></i></span></p>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="wrap">
+      <div class="cab">
+        <div>
+          <p class="rotulo rv">Projetos que já passaram pela Norart</p>
+          <h2 class="h2 rv">Experiência que <em>gera confiança.</em></h2>
+        </div>
+        <a class="link cab__acao rv" href="#projetos">Ver projetos <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+      </div>
+      <div class="vitrine">
+        <figure class="rv" data-ir="projetos"><div class="foto rv-img"><img src="img/real/proj-exposicao.jpg" alt="Obras emolduradas em exposição artística" loading="lazy"></div><figcaption>Exposições artísticas</figcaption></figure>
+        <figure class="rv" style="--d:.08s" data-ir="projetos"><div class="foto rv-img" style="--d:.08s"><img src="img/real/proj-colecionador.jpg" alt="Camisa olímpica emoldurada entre vidros" loading="lazy"></div><figcaption>Projetos para colecionadores</figcaption></figure>
+        <figure class="rv" style="--d:.16s" data-ir="projetos"><div class="foto rv-img" style="--d:.16s"><img src="img/real/proj-fotografia.jpg" alt="Obra autoral recebendo moldura clara" loading="lazy"></div><figcaption>Fotografias autorais</figcaption></figure>
+        <figure class="rv" style="--d:.24s" data-ir="projetos"><div class="foto rv-img" style="--d:.24s"><img src="img/real/proj-corporativo.jpg" alt="Díptico de fotografias de árvores em escritório" loading="lazy"></div><figcaption>Ambientes corporativos</figcaption></figure>
+        <figure class="rv" style="--d:.32s" data-ir="projetos"><div class="foto rv-img" style="--d:.32s"><img src="img/real/proj-residencial.jpg" alt="Pintura em moldura caixa preta em residência" loading="lazy"></div><figcaption>Projetos residenciais</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-label="Quem confia na Norart">
+    <div class="marquee__trilho"><span>Arquitetos <i>·</i> Designers de interiores <i>·</i> Artistas <i>·</i> Fotógrafos <i>·</i> Colecionadores <i>·</i> Empresas <i>·</i> Galerias e espaços culturais <i>·</i></span><span aria-hidden="true">Arquitetos <i>·</i> Designers de interiores <i>·</i> Artistas <i>·</i> Fotógrafos <i>·</i> Colecionadores <i>·</i> Empresas <i>·</i> Galerias e espaços culturais <i>·</i></span></div>
+  </div>
+
+  <section class="chamada">
+    <img src="img/real/instalacao.jpg" alt="" loading="lazy">
+    <div class="wrap">
+      <p class="rotulo rv">O que ouvimos com frequência</p>
+      <h2 class="h2 rv"><em>“Se a Norart não faz, ninguém mais faz.”</em></h2>
+      <p class="rv" style="--d:.1s">Traga a sua obra, a sua fotografia ou a sua memória. A gente encontra o jeito certo de apresentá-la.</p>
+      <div class="acoes rv" style="--d:.2s">
+        <a class="btn btn--branco" href="#contato">Pedir orçamento <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+        <a class="btn btn--claro-linha" data-zap="geral" href="https://wa.me/5561981532529" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PRODUTOS ================= -->
+<div class="vista" data-vista="produtos" hidden>
+  <header class="pagina-cab">
+    <div class="wrap">
+      <nav class="miga" aria-label="Você está em"><a href="#inicio">Início</a><span>Produtos</span></nav>
+      <div class="grade">
+        <h1 class="h1 rv">Produtos</h1>
+        <p class="lead rv" style="--d:.1s">Molduras, passe-partouts, vidros e espelhos sob medida. Cada projeto recebe orientação personalizada antes da produção.</p>
+      </div>
+      <div class="filtros" role="group" aria-label="Filtrar produtos" style="margin-top:36px">
+        <button class="filtro" type="button" data-cat="todos" aria-pressed="true">Todos</button>
+        <button class="filtro" type="button" data-cat="molduras" aria-pressed="false">Molduras</button>
+        <button class="filtro" type="button" data-cat="vidros" aria-pressed="false">Vidros e espelhos</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="secao" data-grupo="molduras">
+    <div class="wrap">
+      <div class="cab">
+        <div><p class="rotulo rv">Linha de molduras</p><h2 class="h2 rv">Oito perfis, <em>infinitas combinações.</em></h2></div>
+        <p class="lead rv" style="--d:.1s">Toque em uma moldura para ver detalhes, provar na parede e pedir orçamento.</p>
+      </div>
+      <div class="produtos" id="gradeMolduras"></div>
+    </div>
+  </section>
+
+  <section class="secao areia" data-grupo="molduras">
+    <div class="wrap">
+      <div class="cab">
+        <div><p class="rotulo rv">Molduras sob medida</p><h2 class="h2 rv">Produzimos <em>molduras para</em></h2></div>
+        <p class="lead rv" style="--d:.1s">Do quadro de família à camisa autografada, cada peça pede um tipo de montagem, profundidade e vidro.</p>
+      </div>
+      <div class="aplicacoes">
+        <figure class="aplicacao rv"><div class="foto rv-img"><img src="img/real/proj-residencial.jpg" alt="" loading="lazy"></div><figcaption>Obras de arte<small>Telas, pinturas e técnicas mistas</small></figcaption></figure>
+        <figure class="aplicacao rv" style="--d:.08s"><div class="foto rv-img" style="--d:.08s"><img src="img/real/proj-fotografia.jpg" alt="" loading="lazy"></div><figcaption>Fotografias<small>Ampliações e fotografia autoral</small></figcaption></figure>
+        <figure class="aplicacao rv" style="--d:.16s"><div class="foto rv-img" style="--d:.16s"><img src="img/real/obj-gravura-ave.jpg" alt="" loading="lazy"></div><figcaption>Gravuras<small>Com passe-partout e vidro adequado</small></figcaption></figure>
+        <figure class="aplicacao rv" style="--d:.24s"><div class="foto rv-img" style="--d:.24s"><img src="img/real/proj-colecionador.jpg" alt="" loading="lazy"></div><figcaption>Camisetas entre vidros<small>Peças de jogo e de coleção</small></figcaption></figure>
+        <figure class="aplicacao rv"><div class="foto rv-img"><img src="img/real/obj-colecao.jpg" alt="" loading="lazy"></div><figcaption>Itens afetivos e colecionáveis<small>Caixas profundas sob medida</small></figcaption></figure>
+        <figure class="aplicacao rv" style="--d:.08s"><div class="foto rv-img" style="--d:.08s"><img src="img/real/obj-cocar.jpg" alt="" loading="lazy"></div><figcaption>Cocar e objetos<small>Fixação segura e discreta</small></figcaption></figure>
+        <figure class="aplicacao rv" style="--d:.16s"><div class="foto rv-img" style="--d:.16s"><img src="img/real/proj-exposicao.jpg" alt="" loading="lazy"></div><figcaption>Exposições e galerias<small>Produção e montagem de mostras</small></figcaption></figure>
+        <figure class="aplicacao rv" style="--d:.24s"><div class="foto rv-img" style="--d:.24s"><img src="img/real/obj-gravura-preta.jpg" alt="" loading="lazy"></div><figcaption>Ambientes residenciais e corporativos<small>Projetos completos de parede</small></figcaption></figure>
+      </div>
+      <ul class="lista-inline rv"><li>Diplomas e certificados</li><li>Espelhos com moldura</li><li>Bordados e tecidos</li><li>Mapas e documentos</li></ul>
+    </div>
+  </section>
+
+  <section class="secao" data-grupo="molduras">
+    <div class="wrap">
+      <div class="cab">
+        <div><p class="rotulo rv">Vidros para quadros</p><h2 class="h2 rv">O vidro muda <em>a leitura da obra.</em></h2></div>
+        <p class="lead rv" style="--d:.1s">Compare como cada vidro reage à luz do ambiente. A mesma moldura, a mesma obra, três resultados.</p>
+      </div>
+      <div class="vidros-q">
+        <article class="vidro-card rv"><div class="vitrine-q" data-vidro-demo="comum"></div><h3>Vidro comum</h3><p>Protege contra poeira e toque. Bom custo-benefício para pôsteres e fotografias, mas reflete a luz do ambiente.</p><a class="link" data-orcar="Vidro comum para quadro" href="#contato">Orçar <svg aria-hidden="true"><use href="#i-seta"/></svg></a></article>
+        <article class="vidro-card rv" style="--d:.1s"><div class="vitrine-q" data-vidro-demo="ar"></div><h3>Vidro antirreflexo</h3><p>Reduz os reflexos de janelas e luminárias e deixa a leitura da obra nítida de qualquer ângulo.</p><a class="link" data-orcar="Vidro antirreflexo" href="#contato">Orçar <svg aria-hidden="true"><use href="#i-seta"/></svg></a></article>
+        <article class="vidro-card rv" style="--d:.2s"><div class="vitrine-q" data-vidro-demo="museu"></div><h3>Vidro museu</h3><p>Antirreflexo com filtro UV, que ajuda a preservar as cores de gravuras, fotografias e documentos.</p><a class="link" data-orcar="Vidro museu" href="#contato">Orçar <svg aria-hidden="true"><use href="#i-seta"/></svg></a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao areia" data-grupo="vidros">
+    <div class="wrap vidros-grade">
+      <div class="mosaico">
+        <div class="foto rv-img"><img src="img/cat-espelhos.jpg" alt="Espelho orgânico com LED em banheiro" loading="lazy"></div>
+        <div class="foto rv-img" style="--d:.1s"><img src="img/proj-espelho-arco.jpg" alt="Espelho em arco com moldura preta" loading="lazy"></div>
+        <div class="foto rv-img" style="--d:.2s"><img src="img/proj-tampo.jpg" alt="Tampo de vidro sobre mesa de madeira" loading="lazy"></div>
+      </div>
+      <div>
+        <p class="rotulo rv">Vidros e espelhos</p>
+        <h2 class="h2 rv">Vidros sob medida para <em>transformar ambientes.</em></h2>
+        <p class="lead rv" style="--d:.1s">Além da molduraria, desenvolvemos projetos em vidro para ambientes residenciais e corporativos, do projeto à instalação.</p>
+        <ul class="servicos" style="margin-top:36px" id="listaVidros"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" data-grupo="vidros">
+    <div class="wrap">
+      <div class="cab">
+        <div><p class="rotulo rv">Espelhos sob medida</p><h2 class="h2 rv">Cinco jeitos de <em>levar luz à parede.</em></h2></div>
+        <p class="lead rv" style="--d:.1s">Espelhos lapidados, bisotados e orgânicos, com ou sem moldura, cortados na medida exata da sua parede e instalados pela nossa equipe.</p>
+      </div>
+      <div class="espelhos-tipos">
+        <article class="tipo rv"><small>01</small><h3>Lapidado e bisotado</h3><p>Bordas trabalhadas que refletem a luz e dão acabamento fino ao espelho, sem precisar de moldura.</p><div class="tipo__chips"><span>Cristal 4 mm</span><span>Bisotê</span></div><a class="link" data-zap-msg="Olá, Norart! Vi no site o espelho lapidado e bisotado e gostaria de um orçamento." href="https://wa.me/5561981532529" target="_blank" rel="noopener">Orçar <svg aria-hidden="true"><use href="#i-seta"/></svg></a></article>
+        <article class="tipo rv" style="--d:.06s"><small>02</small><span class="tipo__selo">Tendência</span><h3>Orgânico</h3><p>Formatos livres desenhados para o seu ambiente, com opção de iluminação de LED por trás.</p><div class="tipo__chips"><span>Sob medida</span><span>LED opcional</span></div><a class="link" data-zap-msg="Olá, Norart! Vi no site o espelho orgânico e gostaria de um orçamento." href="https://wa.me/5561981532529" target="_blank" rel="noopener">Orçar <svg aria-hidden="true"><use href="#i-seta"/></svg></a></article>
+        <article class="tipo rv" style="--d:.12s"><small>03</small><h3>Espelho com moldura</h3><p>Qualquer moldura do catálogo aplicada ao espelho, do redondo minimalista ao barroco dourado.</p><div class="tipo__chips"><span>Redondo</span><span>Retangular</span><span>Oval</span></div><a class="link" data-zap-msg="Olá, Norart! Vi no site o espelho com moldura e gostaria de um orçamento." href="https://wa.me/5561981532529" target="_blank" rel="noopener">Orçar <svg aria-hidden="true"><use href="#i-seta"/></svg></a></article>
+        <article class="tipo rv" style="--d:.18s"><small>04</small><h3>Bronze e fumê</h3><p>Espelhos coloridos que aquecem o ambiente e trazem um ar sofisticado a halls e salas de jantar.</p><div class="tipo__chips"><span>Bronze</span><span>Fumê</span></div><a class="link" data-zap-msg="Olá, Norart! Vi no site os espelhos bronze e fumê e gostaria de um orçamento." href="https://wa.me/5561981532529" target="_blank" rel="noopener">Orçar <svg aria-hidden="true"><use href="#i-seta"/></svg></a></article>
+        <article class="tipo rv" style="--d:.24s"><small>05</small><h3>Painéis de espelho</h3><p>Paredes inteiras de espelho para salas, academias, estúdios de dança e lojas, com instalação no local.</p><div class="tipo__chips"><span>Parede inteira</span><span>Instalação</span></div><a class="link" data-zap-msg="Olá, Norart! Vi no site os painéis de espelho e gostaria de um orçamento." href="https://wa.me/5561981532529" target="_blank" rel="noopener">Orçar <svg aria-hidden="true"><use href="#i-seta"/></svg></a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao--curta">
+    <div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px">
+      <h2 class="h2 rv" style="max-width:20ch">Não encontrou o que procura? <em>A gente faz sob medida.</em></h2>
+      <a class="btn btn--escuro rv" href="#contato">Falar com a Norart <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+    </div>
+  </section>
+</div>
+
+<!-- ================= DETALHE DE PRODUTO ================= -->
+<div class="vista" data-vista="produto" hidden>
+  <div class="wrap">
+    <div class="detalhe">
+      <div class="galeria-prod">
+        <div class="galeria-prod__palco" id="prodPalco"></div>
+        <div class="miniaturas" id="prodMinis"></div>
+      </div>
+      <div class="info-prod">
+        <nav class="miga" aria-label="Você está em"><a href="#inicio">Início</a><span><a href="#produtos">Produtos</a></span><span id="prodMiga">Moldura</span></nav>
+        <p class="rotulo" id="prodLinha">Linha</p>
+        <h1 class="h1" id="prodNome">Moldura</h1>
+        <p class="lead" id="prodDesc" style="margin-top:0"></p>
+        <dl class="specs" id="prodFicha"></dl>
+        <div class="acoes">
+          <a class="btn btn--escuro" id="prodProvar" href="#provador">Provar na parede <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+          <a class="btn btn--linha" id="prodZap" href="https://wa.me/5561981532529" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Solicitar orçamento</a>
+        </div>
+        <p class="nota">O valor é calculado pelo tamanho da obra, passe-partout e vidro. No provador você vê uma estimativa.</p>
+      </div>
+    </div>
+  </div>
+  <section class="secao">
+    <div class="wrap">
+      <div class="cab"><div><p class="rotulo">Outras molduras</p><h2 class="h2">Combine <em>com calma.</em></h2></div><a class="link cab__acao" href="#produtos">Ver todas <svg aria-hidden="true"><use href="#i-seta"/></svg></a></div>
+      <div class="produtos" id="prodOutras"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PROVADOR ================= -->
+<div class="vista" data-vista="provador" hidden>
+  <header class="pagina-cab">
+    <div class="wrap">
+      <nav class="miga" aria-label="Você está em"><a href="#inicio">Início</a><span>Provador</span></nav>
+      <div class="grade">
+        <h1 class="h1 rv">Provador <em>de molduras</em></h1>
+        <p class="lead rv" style="--d:.1s">Envie a foto da sua obra e combine moldura, passe-partout, vidro e tamanho. A simulação respeita as medidas reais do ambiente.</p>
+      </div>
+    </div>
+  </header>
+  <section class="secao--curta">
+    <div class="wrap"><div class="slot-provador" data-slot="provador">
+    <div class="prov" id="provTool">
+      <div class="palco-wrap">
+        <div class="palco" id="palco">
+          <div class="cena" id="cenaProv"></div>
+          <div class="palco__topo" role="radiogroup" aria-label="Ambiente da simulação">
+            <label class="pilula"><input type="radio" name="cena" value="sala" checked><span>Sala</span></label>
+            <label class="pilula"><input type="radio" name="cena" value="quarto"><span>Quarto</span></label>
+            <label class="pilula"><input type="radio" name="cena" value="aparador"><span>Hall</span></label>
+            <label class="pilula"><input type="radio" name="cena" value="detalhe"><span>Detalhe</span></label>
+          </div>
+          <p class="palco__medida">Medida final<b id="medidaFinal">64 × 84 cm</b></p>
+          <div class="lupa" id="lupa" aria-hidden="true"></div>
+        </div>
+        <p class="palco__nota" id="palcoNota">Escala real: o sofá tem 2,5 m de largura.</p>
+      </div>
+
+      <form class="painel" id="provForm" autocomplete="off">
+        <fieldset class="passo">
+          <legend><i>01</i>Sua imagem</legend>
+          <div class="upload">
+            <label class="drop" id="drop" for="arquivo"><svg aria-hidden="true"><use href="#i-envio"/></svg><span><b>Enviar foto</b> ou arraste aqui<br><small>Obra, fotografia, diploma ou bordado</small></span></label>
+            <div class="amostras" role="radiogroup" aria-label="Imagem da simulação">
+              <label class="amostra"><input type="radio" name="arte" value="abstrata" checked><img src="img/obra-abstrata.jpg" alt=""><small>Pintura</small></label>
+              <label class="amostra"><input type="radio" name="arte" value="ipe"><img src="img/obra-ipe.jpg" alt=""><small>Fotografia</small></label>
+              <label class="amostra" id="amostraSua" hidden><input type="radio" name="arte" value="sua"><img id="amostraSuaImg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""><small>Sua foto</small></label>
+            </div>
+          </div>
+          <input class="sr" type="file" id="arquivo" accept="image/*">
+        </fieldset>
+        <fieldset class="passo"><legend><i>02</i>Moldura</legend><div class="molds" id="moldGrid"></div><p class="passo__info" id="moldInfo"></p></fieldset>
+        <fieldset class="passo"><legend><i>03</i>Passe-partout</legend><div class="opcoes" id="passeOps"></div><div class="faixa-range"><label for="passeW">Largura</label><input type="range" id="passeW" min="2" max="12" step="1" value="7"><output id="passeWOut" for="passeW">7 cm</output></div></fieldset>
+        <fieldset class="passo"><legend><i>04</i>Vidro</legend><div class="opcoes" id="vidroOps"></div><p class="passo__info" id="vidroInfo"></p></fieldset>
+        <fieldset class="passo">
+          <legend><i>05</i>Tamanho da obra</legend>
+          <div class="opcoes" id="tamOps"></div>
+          <div class="tam-custom" id="tamCustom" hidden><label>Largura <input type="number" id="tamW" min="10" max="200" value="50" inputmode="numeric"> cm</label><label>Altura <input type="number" id="tamH" min="10" max="200" value="70" inputmode="numeric"> cm</label></div>
+          <div class="opcoes" role="radiogroup" aria-label="Orientação"><label class="op"><input type="radio" name="orient" value="auto" checked><span>Automática</span></label><label class="op"><input type="radio" name="orient" value="v"><span>Vertical</span></label><label class="op"><input type="radio" name="orient" value="h"><span>Horizontal</span></label></div>
+        </fieldset>
+        <div class="resumo" aria-live="polite">
+          <div class="resumo__cab"><span class="rotulo">Seu quadro</span><span id="resumoPrazo">Pronto em 5 a 7 dias úteis</span></div>
+          <dl id="resumoLista"></dl>
+          <div class="resumo__total"><span>Total estimado</span><b id="resumoTotal">R$ 0</b></div>
+          <div class="resumo__acoes">
+            <button class="btn btn--escuro" type="button" id="addPedido">Adicionar ao pedido</button>
+            <a class="btn btn--linha" id="comprarZap" href="https://wa.me/5561981532529" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Comprar agora</a>
+          </div>
+          <p class="nota">Valores simulados para a apresentação do layout. O preço final é confirmado pela equipe depois de conferir medidas e materiais.</p>
+        </div>
+      </form>
+    </div>
+    </div></div>
+  </section>
+
+  <section class="secao">
+    <div class="wrap ad-bloco">
+      <div>
+        <p class="rotulo rv">Antes e depois</p>
+        <h2 class="h2 rv">Uma parede vazia pode ganhar <em>uma nova história.</em></h2>
+        <p class="lead rv" style="--d:.1s">Arraste a linha para comparar a mesma sala com e sem o quadro: fotografia do ipê, moldura nogueira, passe-partout branco e vidro antirreflexo.</p>
+      </div>
+      <div class="ad rv-img" id="ad">
+        <div class="cena ad__depois" id="adDepois"><img class="cena__foto" src="img/cena-sala.jpg" alt=""></div>
+        <div class="cena ad__antes" id="adAntes"><img class="cena__foto" src="img/cena-sala.jpg" alt=""></div>
+        <div class="ad__linha" aria-hidden="true"><span><svg><use href="#i-arrasta"/></svg></span></div>
+        <span class="ad__tag ad__tag--a" aria-hidden="true">Antes</span>
+        <span class="ad__tag ad__tag--d" aria-hidden="true">Depois</span>
+        <input type="range" id="adRange" min="0" max="100" value="50" aria-label="Comparar a parede antes e depois do quadro">
+      </div>
+    </div>
+  </section>
+
+  <section class="secao areia">
+    <div class="wrap">
+      <div class="cab">
+        <div><p class="rotulo rv">Teste o seu olhar</p><h2 class="h2 rv">Qual destas molduras <em>valoriza a obra?</em></h2></div>
+        <p class="lead rv" style="--d:.1s">Molduras bonitas isoladamente nem sempre funcionam no conjunto. Escolha uma opção.</p>
+      </div>
+      <div class="teste" id="teste"><div class="teste__ops" id="testeOps"></div><p class="teste__fim" id="testeFim" hidden></p></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PROJETOS ================= -->
+<div class="vista" data-vista="projetos" hidden>
+  <header class="pagina-cab">
+    <div class="wrap">
+      <nav class="miga" aria-label="Você está em"><a href="#inicio">Início</a><span>Projetos</span></nav>
+      <div class="grade">
+        <h1 class="h1 rv">Projetos</h1>
+        <p class="lead rv" style="--d:.1s">Exposições, coleções, fotografias autorais e ambientes residenciais e corporativos. Toque em um projeto para ver os detalhes.</p>
+      </div>
+      <div class="filtros" role="group" aria-label="Filtrar projetos" style="margin-top:36px">
+        <button class="filtro" type="button" data-f="todos" aria-pressed="true">Todos</button>
+        <button class="filtro" type="button" data-f="molduras" aria-pressed="false">Molduras</button>
+        <button class="filtro" type="button" data-f="vidros" aria-pressed="false">Vidros e espelhos</button>
+        <button class="filtro" type="button" data-f="residencial" aria-pressed="false">Residencial</button>
+        <button class="filtro" type="button" data-f="corporativo" aria-pressed="false">Corporativo</button>
+      </div>
+    </div>
+  </header>
+  <section class="secao--curta">
+    <div class="wrap grade-proj" id="gradeProj"></div>
+  </section>
+
+  <section class="secao areia">
+    <div class="wrap insta">
+      <div class="insta__txt">
+        <p class="rotulo rv">Trabalhos recentes</p>
+        <h2 class="h2 rv">Espelhos e vidros <em>instalados pela equipe.</em></h2>
+        <p class="lead rv" style="--d:.1s">Bastidores, instalações e dicas de escolha aparecem toda semana no nosso Instagram.</p>
+        <a class="link rv" style="--d:.16s;margin-top:28px" href="https://www.instagram.com/norartmolduras/" target="_blank" rel="noopener">@norartmolduras <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+      </div>
+      <div class="insta__circulos">
+        <figure class="circ-insta rv"><div style="background-image:url(img/posts/post-decadas.png);--iw:630;--cx:412;--cy:167;--r:72" role="img" aria-label="Espelho orgânico instalado em sala com cortinas"></div><figcaption>Espelho orgânico na sala</figcaption></figure>
+        <figure class="circ-insta rv" style="--d:.08s"><div style="background-image:url(img/posts/post-decadas.png);--iw:630;--cx:412;--cy:690;--r:72" role="img" aria-label="Espelho redondo instalado junto a estante iluminada"></div><figcaption>Espelho redondo com estante</figcaption></figure>
+        <figure class="circ-insta rv" style="--d:.16s"><div style="background-image:url(img/posts/post-cuidado.png);--iw:628;--cx:222;--cy:160;--r:72" role="img" aria-label="Corredor com vidro e espelho instalados"></div><figcaption>Vidro e espelho no corredor</figcaption></figure>
+        <figure class="circ-insta rv" style="--d:.24s"><div style="background-image:url(img/posts/post-cuidado.png);--iw:628;--cx:222;--cy:690;--r:72" role="img" aria-label="Espelho redondo sobre parede de azulejos estampados"></div><figcaption>Espelho redondo no lavabo</figcaption></figure>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= SOBRE ================= -->
+<div class="vista" data-vista="sobre" hidden>
+  <div class="wrap">
+    <div class="historia">
+      <div>
+        <nav class="miga" aria-label="Você está em"><a href="#inicio">Início</a><span>Sobre</span></nav>
+        <p class="rotulo rv">Nossa história</p>
+        <h1 class="h1 rv" style="font-size:clamp(2.6rem,5.4vw,4.6rem)">Tradição e <em>confiança.</em></h1>
+        <p class="rv" style="--d:.1s">Fundada em 1998 e sob a gestão da família desde 2002, a Norart construiu sua reputação através da qualidade, do acabamento e da confiança dos clientes.</p>
+        <p class="rv" style="--d:.18s">Hoje atendemos artistas, fotógrafos, colecionadores, empresas e clientes que buscam um resultado à altura da importância de suas obras.</p>
+      </div>
+      <div class="foto rv-img"><img src="img/real/casal.jpg" alt="Casal à frente da Norart, com a camiseta da loja" loading="lazy"></div>
+    </div>
+    <div class="numeros">
+      <div class="rv"><b>1998</b><span>Fundação na Asa Sul, em Brasília</span></div>
+      <div class="rv" style="--d:.1s"><b>2002</b><span>Gestão da família desde então</span></div>
+      <div class="rv" style="--d:.2s"><b>+<span data-conta="20">20</span></b><span>anos de molduras sob medida</span></div>
+    </div>
+  </div>
+
+  <section class="secao pilares-secao">
+    <div class="wrap">
+      <div class="cab">
+        <div><p class="rotulo rv">Como fazemos</p><h2 class="h2 rv">Nosso trabalho <em>une</em></h2></div>
+        <p class="lead rv" style="--d:.1s">A Norart nasceu na Asa Sul com um propósito simples: fazer bem feito. Nosso compromisso é entregar exatamente o que prometemos, com acabamento impecável, segurança e atendimento transparente.</p>
+      </div>
+      <div class="pilares3">
+        <article class="rv"><span class="pilar__n">01</span><span class="traco rv-linha"></span><h3>Equipamentos modernos</h3><p>Corte e acabamento precisos em vidros, espelhos e perfis.</p></article>
+        <article class="rv" style="--d:.12s"><span class="pilar__n">02</span><span class="traco rv-linha" style="--d:.12s"></span><h3>Execução artesanal</h3><p>Montagem feita à mão, peça por peça, na nossa oficina.</p></article>
+        <article class="rv" style="--d:.24s"><span class="pilar__n">03</span><span class="traco rv-linha" style="--d:.24s"></span><h3>Materiais de primeira linha</h3><p>Perfis, vidros e passe-partouts escolhidos para durar.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="wrap">
+      <div class="cab"><div><p class="rotulo rv">Por que os clientes nos escolhem</p><h2 class="h2 rv">O que nos <em>diferencia.</em></h2></div></div>
+      <ol class="difs">
+        <li class="rv">Mais de 20 anos de experiência</li>
+        <li class="rv" style="--d:.06s">Atendimento consultivo</li>
+        <li class="rv" style="--d:.12s">Produção sob medida</li>
+        <li class="rv" style="--d:.18s">Acabamento artesanal</li>
+        <li class="rv" style="--d:.24s">Instalação especializada</li>
+        <li class="rv" style="--d:.3s">Relacionamento de longo prazo com artistas e colecionadores</li>
+        <li class="rv" style="--d:.36s">Atenção aos detalhes do início ao fim</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="secao areia">
+    <div class="wrap instalacao">
+      <div class="foto rv-img"><img src="img/real/instalacao.jpg" alt="Equipe Norart instalando fotografia emoldurada" loading="lazy"></div>
+      <div>
+        <p class="rotulo rv">Instalações especializadas</p>
+        <h2 class="h2 rv">Da produção <em>à instalação.</em></h2>
+        <p class="lead rv" style="--d:.1s">Além da moldura, cuidamos da apresentação final da obra. Cada detalhe influencia a percepção da peça no ambiente.</p>
+        <ul class="rv" style="--d:.2s"><li>Transporte</li><li>Instalação residencial</li><li>Instalação corporativa</li><li>Montagem de exposições</li><li>Alinhamento</li><li>Posicionamento</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="wrap publico">
+      <div>
+        <p class="rotulo rv">Para quem é a Norart</p>
+        <h2 class="h2 rv">Atendemos desde uma única obra <em>até projetos inteiros.</em></h2>
+        <div class="chips rv" style="--d:.1s"><span>Arquitetos</span><span>Designers de interiores</span><span>Artistas</span><span>Fotógrafos</span><span>Colecionadores</span><span>Empresas</span><span>Galerias e espaços culturais</span></div>
+      </div>
+      <ol>
+        <li class="rv">Possui uma obra de arte que merece destaque</li>
+        <li class="rv" style="--d:.05s">Tem fotografias especiais que deseja preservar</li>
+        <li class="rv" style="--d:.1s">Está decorando ou renovando um ambiente</li>
+        <li class="rv" style="--d:.15s">É artista, fotógrafo ou colecionador</li>
+        <li class="rv" style="--d:.2s">Busca valorizar um espaço corporativo</li>
+        <li class="rv" style="--d:.25s">Possui uma peça com valor afetivo</li>
+        <li class="rv" style="--d:.3s">Está organizando uma exposição ou mostra artística</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="secao faixa-marrom">
+    <div class="wrap" style="text-align:center;display:grid;justify-items:center">
+      <p class="rotulo rv">Mais que molduras</p>
+      <h2 class="h2 rv" style="max-width:22ch">Ajudamos pessoas a preservar histórias, valorizar obras e <em>transformar ambientes.</em></h2>
+      <p class="citacao rv" style="--d:.1s">“Se a Norart não faz, ninguém mais faz.”</p>
+      <div class="rv" style="--d:.2s;margin-top:32px"><a class="btn btn--branco" href="#contato">Conversar com a equipe <svg aria-hidden="true"><use href="#i-seta"/></svg></a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CONTATO ================= -->
+<div class="vista" data-vista="contato" hidden>
+  <header class="pagina-cab">
+    <div class="wrap">
+      <nav class="miga" aria-label="Você está em"><a href="#inicio">Início</a><span>Contato</span></nav>
+      <div class="grade">
+        <h1 class="h1 rv">Vamos valorizar <em>a sua obra?</em></h1>
+        <p class="lead rv" style="--d:.1s">Conte o que você precisa e anexe fotos de referência, se tiver. O pedido fica pronto para seguir ao nosso WhatsApp.</p>
+      </div>
+    </div>
+  </header>
+  <section class="secao--curta orc-secao">
+    <div class="wrap orc">
+      <div class="orc__col">
+        <div class="etapas rv">
+          <svg class="etapas__moldura" viewBox="0 0 48 48" aria-hidden="true"><rect class="aro" x="4" y="4" width="40" height="40" pathLength="1"/><path class="c" d="M4 16V4h12"/><path class="c" d="M32 4h12v12"/><path class="c" d="M44 32v12H32"/><path class="c" d="M16 44H4V32"/><use class="etapas__logo" href="#simbolo" x="15" y="15" width="18" height="18"/></svg>
+          <div class="etapas__info">
+            <ol class="etapas__lista">
+              <li><button type="button" data-et="1"><b>01</b>Serviço</button></li>
+              <li><button type="button" data-et="2"><b>02</b>Medidas</button></li>
+              <li><button type="button" data-et="3"><b>03</b>Referências</button></li>
+              <li><button type="button" data-et="4"><b>04</b>Contato</button></li>
+            </ol>
+            <span class="etapas__barra"><i></i></span>
+          </div>
+          <p class="sr" aria-live="polite" id="etapaTxt">Etapa 1 de 4</p>
+        </div>
+
+        <form class="orc-form rv" id="orcForm" novalidate style="--d:.08s">
+          <div class="etapa-trilho" id="etapaTrilho">
+            <fieldset class="etapa" data-etapa="1">
+              <legend class="etapa__tit">O que vamos <em>fazer juntos?</em></legend>
+              <p class="etapa__sub">Escolha a opção mais próxima. Você detalha no próximo passo.</p>
+              <div class="servicos-op">
+                <label class="srv"><input type="radio" name="servico" value="Emoldurar obra ou fotografia"><span class="srv__img"><img src="img/real/proj-residencial.jpg" alt="" loading="lazy"></span><span class="srv__txt"><b>Emoldurar obra ou fotografia</b><small>Pinturas, gravuras, fotos e diplomas</small></span><i class="srv__ok" aria-hidden="true"></i></label>
+                <label class="srv"><input type="radio" name="servico" value="Camisa ou objeto entre vidros"><span class="srv__img"><img src="img/real/proj-colecionador.jpg" alt="" loading="lazy"></span><span class="srv__txt"><b>Camisa ou objeto entre vidros</b><small>Peças de coleção e itens afetivos</small></span><i class="srv__ok" aria-hidden="true"></i></label>
+                <label class="srv"><input type="radio" name="servico" value="Espelho sob medida"><span class="srv__img"><img src="img/cat-espelhos.jpg" alt="" loading="lazy"></span><span class="srv__txt"><b>Espelho sob medida</b><small>Lapidado, orgânico ou com moldura</small></span><i class="srv__ok" aria-hidden="true"></i></label>
+                <label class="srv"><input type="radio" name="servico" value="Box, portas ou divisórias de vidro"><span class="srv__img"><img src="img/cat-vidros.jpg" alt="" loading="lazy"></span><span class="srv__txt"><b>Box, portas ou divisórias</b><small>Projetos em vidro temperado</small></span><i class="srv__ok" aria-hidden="true"></i></label>
+                <label class="srv"><input type="radio" name="servico" value="Tampo, prateleira ou reposição de vidro"><span class="srv__img"><img src="img/proj-tampo.jpg" alt="" loading="lazy"></span><span class="srv__txt"><b>Tampo, prateleira ou reposição</b><small>Vidros para móveis e manutenção</small></span><i class="srv__ok" aria-hidden="true"></i></label>
+                <label class="srv"><input type="radio" name="servico" value="Instalação ou montagem de exposição"><span class="srv__img"><img src="img/real/instalacao.jpg" alt="" loading="lazy"></span><span class="srv__txt"><b>Instalação ou exposição</b><small>Transporte, alinhamento e montagem</small></span><i class="srv__ok" aria-hidden="true"></i></label>
+              </div>
+              <span class="erro" id="erroServico"></span>
+            </fieldset>
+
+            <fieldset class="etapa" data-etapa="2" hidden>
+              <legend class="etapa__tit">Medidas e <em>detalhes.</em></legend>
+              <p class="etapa__sub">Medidas aproximadas já ajudam. Veja a proporção se formar ao lado.</p>
+              <div class="medidas">
+                <div class="medidas__campos">
+                  <div class="num"><label for="orcW">Largura</label><div class="num__ctrl"><button type="button" data-passo="w" data-d="-5" aria-label="Diminuir largura">−</button><input id="orcW" type="number" inputmode="numeric" min="5" max="400" value="50"><button type="button" data-passo="w" data-d="5" aria-label="Aumentar largura">+</button></div><small>cm</small></div>
+                  <div class="num"><label for="orcH">Altura</label><div class="num__ctrl"><button type="button" data-passo="h" data-d="-5" aria-label="Diminuir altura">−</button><input id="orcH" type="number" inputmode="numeric" min="5" max="400" value="70"><button type="button" data-passo="h" data-d="5" aria-label="Aumentar altura">+</button></div><small>cm</small></div>
+                  <label class="check"><input type="checkbox" id="orcSemMedida"><span>Ainda não sei as medidas</span></label>
+                </div>
+                <div class="medidas__vis" id="visQuadro" aria-hidden="true">
+                  <span class="cota cota--h" id="cotaH"><b id="cotaW">50 cm</b></span>
+                  <span class="cota cota--v" id="cotaV"><b id="cotaHtxt">70 cm</b></span>
+                </div>
+              </div>
+              <div class="flutua flutua--area">
+                <textarea id="orcDesc" rows="4" maxlength="600" placeholder=" "></textarea>
+                <label for="orcDesc">Conte um pouco do projeto</label>
+                <span class="contador" id="descCont">0/600</span>
+              </div>
+              <div class="sugestoes" role="group" aria-label="Acrescentar à descrição">
+                <button class="sug" type="button" aria-pressed="false" data-sug="Quero passe-partout.">Passe-partout</button>
+                <button class="sug" type="button" aria-pressed="false" data-sug="Prefiro vidro antirreflexo.">Vidro antirreflexo</button>
+                <button class="sug" type="button" aria-pressed="false" data-sug="Preciso de instalação no local.">Instalação no local</button>
+                <button class="sug" type="button" aria-pressed="false" data-sug="É para presente.">É um presente</button>
+                <button class="sug" type="button" aria-pressed="false" data-sug="Tenho uma data limite.">Tenho prazo</button>
+              </div>
+              <span class="erro" id="erroDesc"></span>
+            </fieldset>
+
+            <fieldset class="etapa" data-etapa="3" hidden>
+              <legend class="etapa__tit">Tem alguma <em>referência?</em></legend>
+              <p class="etapa__sub">Fotos da obra, da parede ou de inspirações. É opcional, mas ajuda muito.</p>
+              <label class="parede" id="orcDrop" for="orcArq"><span class="parede__moldura"><svg aria-hidden="true"><use href="#i-envio"/></svg><b>Solte suas fotos aqui</b><small>ou toque para escolher · até 8 imagens</small></span></label>
+              <input class="sr" type="file" id="orcArq" accept="image/*" multiple>
+              <ul class="polaroides" id="anexos"></ul>
+            </fieldset>
+
+            <fieldset class="etapa" data-etapa="4" hidden>
+              <legend class="etapa__tit">Para quem <em>enviamos o orçamento?</em></legend>
+              <p class="etapa__sub">A equipe responde em horário comercial.</p>
+              <div class="campos-2">
+                <div class="flutua"><input id="orcNome" autocomplete="name" placeholder=" "><label for="orcNome">Seu nome</label><span class="erro" id="orcNomeErro"></span></div>
+                <div class="flutua"><input id="orcTel" type="tel" inputmode="tel" autocomplete="tel" placeholder=" "><label for="orcTel">WhatsApp com DDD</label><span class="erro" id="orcTelErro"></span></div>
+              </div>
+              <div class="seg-grupo">
+                <span class="seg-rotulo" id="rotRetorno">Prefere o retorno por</span>
+                <div class="segmento" role="radiogroup" aria-labelledby="rotRetorno"><i class="segmento__pilula" aria-hidden="true"></i><label><input type="radio" name="retorno" value="WhatsApp" checked><span>WhatsApp</span></label><label><input type="radio" name="retorno" value="Ligação"><span>Ligação</span></label></div>
+              </div>
+              <div class="seg-grupo">
+                <span class="seg-rotulo" id="rotPeriodo">Melhor período</span>
+                <div class="segmento" role="radiogroup" aria-labelledby="rotPeriodo"><i class="segmento__pilula" aria-hidden="true"></i><label><input type="radio" name="periodo" value="Manhã"><span>Manhã</span></label><label><input type="radio" name="periodo" value="Tarde"><span>Tarde</span></label><label><input type="radio" name="periodo" value="" checked><span>Tanto faz</span></label></div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="orc-form__nav">
+            <button class="link" type="button" id="etapaVoltar" hidden><svg aria-hidden="true"><use href="#i-esq"/></svg>Voltar</button>
+            <span class="orc-form__dica" id="etapaDica">Escolha uma opção</span>
+            <button class="btn btn--escuro" type="submit" id="etapaAvancar">Continuar <svg aria-hidden="true"><use href="#i-seta"/></svg></button>
+          </div>
+        </form>
+
+        <div class="ok" id="orcOk" hidden tabindex="-1">
+          <p class="rotulo rotulo--marrom" style="margin:0">Ficha nº <span id="okNum">0000</span></p>
+          <h3>Seu orçamento está <em>pronto para envio.</em></h3>
+          <p id="orcOkTxt">Toque em “Enviar pelo WhatsApp” para abrir a conversa com a mensagem pronta.</p>
+          <pre id="orcResumo"></pre>
+          <div class="acoes">
+            <a class="btn btn--escuro" id="orcZap" href="https://wa.me/5561981532529" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Enviar pelo WhatsApp</a>
+            <button class="btn btn--linha" type="button" id="orcCopiar">Copiar resumo</button>
+            <button class="link" type="button" id="orcEditar">Editar</button>
+            <button class="link" type="button" id="orcNovo">Começar outro</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="ficha rv" id="ficha" aria-label="Resumo do seu pedido" style="--d:.16s">
+        <div class="ficha__cab">
+          <div><small>Ficha de orçamento</small><b id="fichaNum">Nº 0000</b></div>
+          <svg class="ficha__selo" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="aroFicha" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><g class="ficha__giro"><text font-family="Jost,Arial,sans-serif" font-size="15" letter-spacing="3" fill="#5B4131"><textPath href="#aroFicha" textLength="486" lengthAdjust="spacing">NORART · MOLDURAS · VIDROS · DESDE 1998 ·</textPath></text></g><use href="#simbolo" x="66" y="66" width="68" height="68" style="color:#1F1B17"/></svg>
+        </div>
+        <div class="ficha__vis" id="fichaQuadro"></div>
+        <span class="ficha__prog" aria-hidden="true"><i id="fichaProg"></i></span>
+        <dl class="ficha__lista">
+          <div data-f="servico"><dt>Serviço</dt><dd class="vazio">—</dd></div>
+          <div data-f="medidas"><dt>Medidas</dt><dd class="vazio">—</dd></div>
+          <div data-f="detalhes"><dt>Detalhes</dt><dd class="vazio">—</dd></div>
+          <div data-f="refs"><dt>Referências</dt><dd class="vazio">—</dd></div>
+          <div data-f="cliente"><dt>Cliente</dt><dd class="vazio">—</dd></div>
+          <div data-f="retorno"><dt>Retorno</dt><dd>WhatsApp</dd></div>
+        </dl>
+        <p class="ficha__rodape"><span id="fichaData"></span><span>CLS 213 · Asa Sul</span></p>
+        <span class="ficha__carimbo" aria-hidden="true">Pronta para envio</span>
+      </aside>
+    </div>
+  </section>
+
+  <section class="secao--curta" style="padding-top:0">
+    <div class="wrap">
+      <div class="infos-faixa rv">
+        <div class="info"><h3>Loja</h3><p>CLS 213, Bloco B, Loja 37<br>Asa Sul, Brasília - DF · 70292-520</p>
+          <div class="info__acoes"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=CLS%20213%20Bloco%20B%20Loja%2037%20Asa%20Sul%20Bras%C3%ADlia%20DF" target="_blank" rel="noopener">Abrir no mapa <svg aria-hidden="true"><use href="#i-seta"/></svg></a><button class="link" type="button" data-copiar="CLS 213, Bloco B, Loja 37 - Asa Sul, Brasília - DF, 70292-520">Copiar</button></div></div>
+        <div class="info"><h3>Telefones</h3><div class="tels"><span>(61) 98153-2529 <small>WhatsApp</small></span><span>(61) 3346-0012</span><span>(61) 3346-0121</span></div>
+          <div class="info__acoes"><a class="link" data-zap="geral" href="https://wa.me/5561981532529" target="_blank" rel="noopener">WhatsApp <svg aria-hidden="true"><use href="#i-seta"/></svg></a><button class="link" type="button" data-copiar="(61) 98153-2529">Copiar</button></div></div>
+        <div class="info"><h3>Horário</h3><p class="status" id="status">Seg a sex, 9h às 18h</p><dl class="horas"><dt>Seg a sex</dt><dd>9h às 18h</dd><dt>Sábado</dt><dd>9h às 13h</dd><dt>Domingo</dt><dd>Fechado</dd></dl></div>
+        <div class="info"><h3>Instagram</h3><p><a class="link" href="https://www.instagram.com/norartmolduras/" target="_blank" rel="noopener">@norartmolduras <svg aria-hidden="true"><use href="#i-seta"/></svg></a></p><p class="info__nota">Bastidores, instalações e dicas de escolha toda semana.</p></div>
+      </div>
+      <figure class="mapa rv">
+        <svg viewBox="0 0 1200 420" role="img" aria-label="Mapa ilustrativo do Plano Piloto com a localização da Norart na CLS 213, Asa Sul">
+          <rect width="1200" height="420" fill="#F2EEE8"/>
+          <path d="M760-20C900 60 980 170 970 250 960 330 860 400 640 450" fill="none" stroke="#DCE3E0" stroke-width="90" stroke-linecap="round"/>
+          <text x="905" y="300" font-family="Jost,sans-serif" font-size="12" letter-spacing="4" fill="#9AA9A3" transform="rotate(-70 905 300)">LAGO PARANOÁ</text>
+          <path d="M560 30Q628 128 600 210Q572 292 470 390" fill="none" stroke="#E2D9CC" stroke-width="64" stroke-linecap="round"/>
+          <path d="M300 160L860 248" stroke="#E2D9CC" stroke-width="26" stroke-linecap="round"/>
+          <path d="M300 160L860 248" stroke="#B4935F" stroke-width="1.5"/>
+          <path d="M560 30Q628 128 600 210Q572 292 470 390" fill="none" stroke="#1F1B17" stroke-width="1.5"/>
+          <text x="330" y="148" font-family="Jost,sans-serif" font-size="11" letter-spacing="3" fill="#8F8478" transform="rotate(9 330 148)">EIXO MONUMENTAL</text>
+          <text x="634" y="86" font-family="Jost,sans-serif" font-size="20" font-weight="300" fill="#5F574F">Asa Norte</text>
+          <text x="380" y="330" font-family="Jost,sans-serif" font-size="20" font-weight="300" fill="#5F574F">Asa Sul</text>
+          <circle class="onda" cx="532" cy="330" r="10" fill="#B4935F"/>
+          <g class="pino"><path d="M532 330c-10-12-17-20-17-29a17 17 0 0 1 34 0c0 9-7 17-17 29z" fill="#1F1B17"/><circle cx="532" cy="301" r="6" fill="#B4935F"/></g>
+          <g transform="translate(564 300)"><rect width="196" height="52" fill="#FFFFFF" stroke="#E8E1D7"/><text x="16" y="23" font-family="Jost,sans-serif" font-size="15" fill="#1F1B17">Norart</text><text x="16" y="40" font-family="Jost,sans-serif" font-size="11" letter-spacing="1" fill="#5F574F">CLS 213 · Bloco B · Loja 37</text></g>
+        </svg>
+        <figcaption><span>Mapa ilustrativo do Plano Piloto. No site publicado, entra o mapa do Google integrado.</span><a class="link" href="https://www.google.com/maps/dir/?api=1&amp;destination=CLS%20213%20Bloco%20B%20Loja%2037%20Asa%20Sul%20Bras%C3%ADlia%20DF" target="_blank" rel="noopener">Traçar rota <svg aria-hidden="true"><use href="#i-seta"/></svg></a></figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape__topo">
+      <div>
+        <a class="marca" href="#inicio" aria-label="Norart, página inicial"><svg class="simbolo" aria-hidden="true"><use href="#simbolo"/></svg><span class="palavra"><svg viewBox="0 -1 104 18" aria-hidden="true"><use href="#palavra"/></svg><small>molduras, vidros e decoração</small></span></a>
+        <p class="rodape__frase">Sua obra merece uma moldura à altura.</p>
+      </div>
+      <div><h3>Navegue</h3><ul><li><a href="#produtos">Produtos</a></li><li><a href="#provador">Provador de molduras</a></li><li><a href="#projetos">Projetos</a></li><li><a href="#sobre">Sobre a Norart</a></li></ul></div>
+      <div><h3>Produtos</h3><ul><li><a href="#produtos" data-filtro="molduras">Molduras</a></li><li><a href="#produtos" data-filtro="vidros">Vidros e espelhos</a></li><li><a href="#produtos" data-filtro="molduras">Passe-partout</a></li><li><a href="#contato">Orçamento</a></li></ul></div>
+      <div><h3>Contato</h3><ul><li>CLS 213, Bloco B, Loja 37</li><li>Asa Sul, Brasília - DF</li><li><a data-zap="geral" href="https://wa.me/5561981532529" target="_blank" rel="noopener">(61) 98153-2529</a></li><li>(61) 3346-0012 · 3346-0121</li><li><a href="https://www.instagram.com/norartmolduras/" target="_blank" rel="noopener">@norartmolduras</a></li></ul></div>
+    </div>
+    <div class="rodape__base"><span>© <span id="ano">2026</span> Norart Molduras, Vidros e Decoração</span><span>Prévia de layout para aprovação. Algumas imagens são ilustrativas e os valores do provador são simulados.</span></div>
+  </div>
+</footer>
+
+<a class="zap-flutua" id="zapFlutua" href="https://wa.me/5561981532529" target="_blank" rel="noopener" aria-label="Conversar com a Norart no WhatsApp"><span id="zapDica">Fale com a Norart</span><i><svg aria-hidden="true"><use href="#i-zap"/></svg></i></a>
+
+<div class="gaveta" id="gaveta" aria-hidden="true" inert>
+  <div class="gaveta__fundo" data-fechar></div>
+  <aside class="gaveta__painel" role="dialog" aria-modal="true" aria-labelledby="gavetaTitulo">
+    <div class="gaveta__cab"><h2 id="gavetaTitulo">Meu pedido</h2><button class="icone-btn" type="button" data-fechar aria-label="Fechar pedido"><svg aria-hidden="true"><use href="#i-x"/></svg></button></div>
+    <div class="gaveta__corpo" id="pedidoLista"></div>
+    <div class="gaveta__pe" id="pedidoPe"></div>
+  </aside>
+</div>
+
+<dialog class="lightbox" id="lightbox" aria-labelledby="lbTitulo">
+  <button class="icone-btn lb__fechar" type="button" id="lbFechar" aria-label="Fechar"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  <div class="lb__foto"><img id="lbImg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""></div>
+  <div class="lb__info">
+    <p class="rotulo" id="lbTags" style="margin:0"></p>
+    <h3 id="lbTitulo"></h3>
+    <p id="lbTexto"></p>
+    <dl><dt>Produto</dt><dd id="lbProd"></dd><dt>Acabamento</dt><dd id="lbAcab"></dd><dt>Ambiente</dt><dd id="lbAmb"></dd></dl>
+    <a class="btn btn--escuro" id="lbZap" href="https://wa.me/5561981532529" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Quero um projeto assim</a>
+    <div class="lb__nav"><button class="icone-btn" type="button" id="lbAnt" aria-label="Projeto anterior"><svg aria-hidden="true"><use href="#i-esq"/></svg></button><button class="icone-btn" type="button" id="lbProx" aria-label="Próximo projeto"><svg aria-hidden="true"><use href="#i-dir"/></svg></button></div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>

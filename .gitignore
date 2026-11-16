@@ -1,0 +1,25 @@
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Arquivo antigo de pré-visualização (substituído pelo index.html completo)
+preview.html
+
+# Imagens da primeira versão que não são mais usadas no site
+img/hero-sala.jpg
+img/hero-hall.jpg
+img/hero-galeria.jpg
+img/cat-molduras.jpg
+img/proj-cafe.jpg
+img/proj-barroco.jpg
+img/proj-oficina.jpg
+img/posts/logo-original.jpg
+img/posts/post-conheca.webp
+img/posts/post-detalhes.png
+img/posts/post-equipe.webp
+img/posts/post-erro-comum.png
+img/posts/post-escolha.webp
+img/posts/post-percebida.webp
+img/posts/post-rebuscada.png
+img/posts/post-trabalho.webp
