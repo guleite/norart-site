@@ -20,9 +20,9 @@ A navegação acontece numa única página, com rotas pelo endereço (`#`):
 
 ## Destaques
 
-- **Provador de molduras:** a obra (enviada pelo visitante ou de exemplo) recebe fotos reais das molduras aplicadas com `border-image`, com passe-partout, vidro e tamanho, em ambientes fotográficos na escala real.
+- **Provador de molduras:** a obra (enviada pelo visitante ou de exemplo) recebe fotos reais das molduras aplicadas com `border-image`, com passe-partout, vidro e tamanho, em ambientes fotográficos na escala real. A combinação segue para orçamento pelo WhatsApp ou é levada para a ficha de orçamento.
 - **Ficha de orçamento:** formulário em etapas com prévia da proporção, sugestões rápidas, anexos em estilo polaroide e resumo ao vivo. O pedido final abre o WhatsApp com a mensagem pronta.
-- **Pedido:** sacola com os quadros montados no provador, finalizada pelo WhatsApp.
+- **Sem venda online:** o site não é uma loja virtual. Não há carrinho nem preços; todo contato termina em pedido de orçamento.
 - **Animações leves:** revelação ao rolar, contadores, cartões que viram e transições entre páginas. Quem usa "reduzir movimento" no sistema vê tudo sem animação.
 
 ## Estrutura
@@ -58,10 +58,10 @@ npx serve .
 
 ## Publicação
 
-Para publicar com o GitHub Pages: **Settings → Pages → Deploy from a branch → `main` / root**. Em repositórios privados, o Pages exige um plano pago do GitHub.
+O site está publicado no GitHub Pages em https://guleite.github.io/norart-site/, a partir da branch `main` (raiz). Cada push em `main` atualiza o site em cerca de um minuto.
 
 ## Observações
 
 - Ambientes, obras de exemplo e as fotos das molduras foram gerados com IA para a apresentação. As fotos de trabalhos em `img/real/` e `img/posts/` são da própria Norart.
-- Os valores e prazos do provador são simulados.
+- Os prazos de produção mostrados no provador e nas fichas das molduras são ilustrativos.
 - O mapa da página de contato é ilustrativo. No site final, deve ser trocado pelo mapa do Google incorporado.

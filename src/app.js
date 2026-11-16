@@ -5,8 +5,6 @@
 const $=(s,el=document)=>el.querySelector(s);
 const $$=(s,el=document)=>Array.from(el.querySelectorAll(s));
 const ZAP='5561981532529';
-const FMT=new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0,minimumFractionDigits:0});
-const brl=v=>FMT.format(Math.round(v));
 const zap=m=>'https://wa.me/'+ZAP+'?text='+encodeURIComponent(m);
 const virg=n=>String(Math.round(n*10)/10).replace('.',',');
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -14,7 +12,6 @@ const memo={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):
 const REDUZ=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
 const SETA='<svg aria-hidden="true"><use href="#i-seta"/></svg>';
-const ICO_ZAP='<svg aria-hidden="true"><use href="#i-zap"/></svg>';
 let toastT;
 function avisar(t){const el=$('#toast');el.textContent=t;el.classList.add('on');clearTimeout(toastT);toastT=setTimeout(()=>el.classList.remove('on'),2600)}
 function copiar(texto){
@@ -26,14 +23,14 @@ if(!REDUZ)document.documentElement.classList.add('anima');
 
 /* ================= dados ================= */
 const MOLDURAS=[
-  {id:'filete',nome:'Filete Ouro',perfil:2,preco:95,tom:'Dourado acetinado',linha:'Contemporânea',slice:[98,97,97,98],desc:'Perfil fino em folha de ouro acetinada, que emoldura sem competir com a obra.',indicacao:'Gravuras, fotografias e pinturas de tons quentes'},
-  {id:'barroca',nome:'Barroca Ouro Velho',perfil:9,preco:210,tom:'Ouro envelhecido',linha:'Clássica',slice:[221,236,236,218],prazo:'7 a 10 dias úteis',desc:'Entalhes em folhas de acanto, conchas nos cantos e fileira de pérolas, com douração envelhecida.',indicacao:'Retratos, espelhos de destaque e obras clássicas'},
-  {id:'preta',nome:'Caixa Preta Fosca',perfil:3,preco:82,tom:'Preto fosco',linha:'Contemporânea',slice:[127,117,114,132],desc:'Perfil reto com pintura preta fosca, que dá peso gráfico à composição.',indicacao:'Fotografias, gravuras e obras em preto e branco'},
-  {id:'branca',nome:'Branca Laqueada',perfil:3.5,preco:88,tom:'Laca branca',linha:'Contemporânea',slice:[86,86,86,86],desc:'Laca branca com degrau interno suave, leve e luminosa.',indicacao:'Ambientes claros, quadros infantis e composições leves'},
-  {id:'freijo',nome:'Freijó Natural',perfil:4,preco:110,tom:'Madeira clara',linha:'Madeira natural',slice:[239,238,238,238],desc:'Madeira clara de veios retos com acabamento a óleo fosco.',indicacao:'Fotografias de natureza e ambientes com linho e palha'},
-  {id:'nogueira',nome:'Nogueira',perfil:5,preco:128,tom:'Madeira escura',linha:'Madeira natural',slice:[226,225,226,226],desc:'Madeira escura com perfil escalonado e pequeno canal interno.',indicacao:'Salas com marcenaria e obras de cores intensas'},
-  {id:'prata',nome:'Prata Escovada',perfil:1.5,preco:72,tom:'Alumínio escovado',linha:'Minimalista',slice:[64,54,54,64],desc:'Alumínio escovado ultrafino, discreto e contemporâneo.',indicacao:'Pôsteres, diplomas e composições modernas'},
-  {id:'americana',nome:'Caixa Americana Carvalho',perfil:2.5,preco:78,tom:'Carvalho natural',linha:'Para telas',slice:[103,103,103,103],semPasse:true,desc:'A tela flutua dentro da moldura, com um respiro escuro em volta. Feita para pinturas em tela, sem vidro.',indicacao:'Pinturas em tela'}
+  {id:'filete',nome:'Filete Ouro',perfil:2,tom:'Dourado acetinado',linha:'Contemporânea',slice:[98,97,97,98],desc:'Perfil fino em folha de ouro acetinada, que emoldura sem competir com a obra.',indicacao:'Gravuras, fotografias e pinturas de tons quentes'},
+  {id:'barroca',nome:'Barroca Ouro Velho',perfil:9,tom:'Ouro envelhecido',linha:'Clássica',slice:[221,236,236,218],prazo:'7 a 10 dias úteis',desc:'Entalhes em folhas de acanto, conchas nos cantos e fileira de pérolas, com douração envelhecida.',indicacao:'Retratos, espelhos de destaque e obras clássicas'},
+  {id:'preta',nome:'Caixa Preta Fosca',perfil:3,tom:'Preto fosco',linha:'Contemporânea',slice:[127,117,114,132],desc:'Perfil reto com pintura preta fosca, que dá peso gráfico à composição.',indicacao:'Fotografias, gravuras e obras em preto e branco'},
+  {id:'branca',nome:'Branca Laqueada',perfil:3.5,tom:'Laca branca',linha:'Contemporânea',slice:[86,86,86,86],desc:'Laca branca com degrau interno suave, leve e luminosa.',indicacao:'Ambientes claros, quadros infantis e composições leves'},
+  {id:'freijo',nome:'Freijó Natural',perfil:4,tom:'Madeira clara',linha:'Madeira natural',slice:[239,238,238,238],desc:'Madeira clara de veios retos com acabamento a óleo fosco.',indicacao:'Fotografias de natureza e ambientes com linho e palha'},
+  {id:'nogueira',nome:'Nogueira',perfil:5,tom:'Madeira escura',linha:'Madeira natural',slice:[226,225,226,226],desc:'Madeira escura com perfil escalonado e pequeno canal interno.',indicacao:'Salas com marcenaria e obras de cores intensas'},
+  {id:'prata',nome:'Prata Escovada',perfil:1.5,tom:'Alumínio escovado',linha:'Minimalista',slice:[64,54,54,64],desc:'Alumínio escovado ultrafino, discreto e contemporâneo.',indicacao:'Pôsteres, diplomas e composições modernas'},
+  {id:'americana',nome:'Caixa Americana Carvalho',perfil:2.5,tom:'Carvalho natural',linha:'Para telas',slice:[103,103,103,103],semPasse:true,desc:'A tela flutua dentro da moldura, com um respiro escuro em volta. Feita para pinturas em tela, sem vidro.',indicacao:'Pinturas em tela'}
 ];
 const MOLD={};MOLDURAS.forEach(m=>MOLD[m.id]=m);
 const PASSES={
@@ -44,10 +41,10 @@ const PASSES={
   duplo:{nome:'Duplo com filete',cor:'#F4EEE3',filete:true}
 };
 const VIDROS={
-  nenhum:{nome:'Sem vidro',preco:0,info:'Para telas e obras com verniz, que precisam respirar.'},
-  comum:{nome:'Comum',preco:160,info:'Protege contra poeira e toque, mas reflete a luz do ambiente.'},
-  ar:{nome:'Antirreflexo',preco:420,info:'Leitura nítida mesmo com janela ou luminária ao lado.'},
-  museu:{nome:'Museu',preco:980,info:'Antirreflexo com filtro UV, para obras e fotografias de valor.'}
+  nenhum:{nome:'Sem vidro',info:'Para telas e obras com verniz, que precisam respirar.'},
+  comum:{nome:'Comum',info:'Protege contra poeira e toque, mas reflete a luz do ambiente.'},
+  ar:{nome:'Antirreflexo',info:'Leitura nítida mesmo com janela ou luminária ao lado.'},
+  museu:{nome:'Museu',info:'Antirreflexo com filtro UV, para obras e fotografias de valor.'}
 };
 const OBRAS={abstrata:{src:'img/obra-abstrata.jpg',r:1128/1400},ipe:{src:'img/obra-ipe.jpg',r:1400/939},sua:{src:'',r:1}};
 const R_CENA=1920/1434;
@@ -234,25 +231,17 @@ function dimsObra(){
   return o==='h'?[b,a]:[a,b];
 }
 function cfgAtual(){const [w,h]=dimsObra();return{mold:st.moldura,src:OBRAS[st.arte].src,w,h,passe:st.passe,passeW:+st.passeW,vidro:st.vidro}}
-function preco(c){
-  const md=medidas(c),M=MOLD[c.mold],iw=c.w+2*md.p,ih=c.h+2*md.p;
-  const metros=(2*(iw+ih)+8*M.perfil)/100,area=iw*ih/10000;
-  const vMold=metros*M.preco,vPasse=md.p?Math.max(28,area*(c.passe==='duplo'?210:130)):0;
-  const vVidro=VIDROS[c.vidro].preco?Math.max(30,area*VIDROS[c.vidro].preco):0,vMont=38;
-  return{metros,vMold,vPasse,vVidro,vMont,total:vMold+vPasse+vVidro+vMont};
-}
 function descrever(c){
   const md=medidas(c),M=MOLD[c.mold];
   return{titulo:'Quadro '+c.w+' × '+c.h+' cm',linhas:['Moldura: '+M.nome+' ('+virg(M.perfil)+' cm)',md.p?'Passe-partout: '+PASSES[c.passe].nome.toLowerCase()+', '+md.p+' cm':'Sem passe-partout','Vidro: '+VIDROS[c.vidro].nome.toLowerCase(),'Medida final: '+virg(md.W)+' × '+virg(md.H)+' cm']};
 }
-function itemAtual(){const c=cfgAtual(),d=descrever(c);return{titulo:d.titulo,linhas:d.linhas,preco:preco(c).total,qtd:1,sua:st.arte==='sua',mold:c.mold}}
-function textoPedido(itens,dados){
-  let t='Olá, Norart! Montei um pedido pelo site:\n\n';
-  itens.forEach((it,i)=>{t+='*'+(i+1)+') '+it.titulo+'*\n'+it.linhas.map(l=>'   '+l).join('\n')+'\n   Quantidade: '+it.qtd+' · Estimativa: '+brl(it.preco*it.qtd)+'\n\n'});
-  t+='*Total estimado:* '+brl(itens.reduce((s,it)=>s+it.preco*it.qtd,0))+'\n';
-  if(dados)t+='\n*Nome:* '+dados.nome+'\n*WhatsApp:* '+dados.tel+'\n*Entrega:* '+dados.entrega+'\n';
-  t+=itens.some(it=>it.sua)?'\nVou enviar a foto da obra aqui na conversa.':'\nUsei uma imagem de exemplo na simulação. Vou enviar a foto da minha obra aqui na conversa.';
-  return t;
+function textoSimulacao(){
+  const d=descrever(cfgAtual());
+  return'Olá, Norart! Montei esta combinação no provador do site e gostaria de um orçamento:\n\n*'+d.titulo+'*\n'+d.linhas.map(l=>'   '+l).join('\n')+'\n\n'+(st.arte==='sua'?'Vou enviar a foto da obra aqui na conversa.':'Usei uma imagem de exemplo na simulação. Vou enviar a foto da minha obra aqui na conversa.');
+}
+function resumoFicha(){
+  const c=cfgAtual(),md=medidas(c),M=MOLD[c.mold];
+  return'Simulei no provador: moldura '+M.nome+(md.p?', passe-partout '+PASSES[c.passe].nome.toLowerCase()+' de '+md.p+' cm':', sem passe-partout')+', vidro '+VIDROS[c.vidro].nome.toLowerCase()+'. Medida final de '+virg(md.W)+' × '+virg(md.H)+' cm.';
 }
 function construirProvador(){
   $('#moldGrid').innerHTML=MOLDURAS.map(M=>'<label class="mold"><input type="radio" name="moldura" value="'+M.id+'"'+(M.id===st.moldura?' checked':'')+'><span class="m-img"><img src="img/molduras/'+M.id+'.jpg" alt="" loading="lazy"></span><small>'+M.nome+'</small></label>').join('');
@@ -275,7 +264,7 @@ function atualizarProvador(){
   rafP=requestAnimationFrame(()=>{
     const cena=$('#cenaProv');if(!cena||!cena.clientWidth)return;
     if(cena.dataset.cena!==st.cena)qProv=montarCena(cena,st.cena);
-    const c=cfgAtual(),md=medidas(c),p=preco(c),M=MOLD[c.mold];
+    const c=cfgAtual(),md=medidas(c),M=MOLD[c.mold];
     const L=layoutCena(st.cena,cena.clientWidth,cena.clientHeight,md.W,md.H);
     aplicarQuadro(qProv,c,L.s,L);
     const lupa=$('#lupa');if(!qLupa){qLupa=criarQuadro();lupa.appendChild(qLupa)}
@@ -283,11 +272,10 @@ function atualizarProvador(){
     aplicarQuadro(qLupa,c,s2,{x:S*.2,y:S*.2});
     $('#medidaFinal').textContent=virg(md.W)+' × '+virg(md.H)+' cm';
     $('#palcoNota').textContent=CENAS[st.cena].nota;
-    const linhas=[['Obra',c.w+' × '+c.h+' cm'],['Moldura '+M.nome+' · '+virg(p.metros)+' m',brl(p.vMold)],md.p?['Passe-partout '+PASSES[c.passe].nome.toLowerCase()+' · '+md.p+' cm',brl(p.vPasse)]:['Passe-partout','Sem'],c.vidro==='nenhum'?['Vidro','Sem vidro']:['Vidro '+VIDROS[c.vidro].nome.toLowerCase(),brl(p.vVidro)],['Montagem e acabamento',brl(p.vMont)]];
+    const linhas=[['Obra',c.w+' × '+c.h+' cm'],['Moldura',M.nome],['Passe-partout',md.p?PASSES[c.passe].nome+' · '+md.p+' cm':'Sem'],['Vidro',VIDROS[c.vidro].nome],['Medida final',virg(md.W)+' × '+virg(md.H)+' cm']];
     $('#resumoLista').innerHTML=linhas.map(([a,b])=>'<dt>'+esc(a)+'</dt><dd>'+esc(b)+'</dd>').join('');
-    $('#resumoTotal').textContent=brl(p.total);
-    $('#resumoPrazo').textContent='Pronto em '+(M.prazo||'5 a 7 dias úteis');
-    $('#comprarZap').href=zap(textoPedido([itemAtual()]));
+    $('#resumoPrazo').textContent='Produção em '+(M.prazo||'5 a 7 dias úteis');
+    $('#provZap').href=zap(textoSimulacao());
     $$('input[name=passe]').forEach(i=>i.disabled=!!M.semPasse);
     $('#passeW').disabled=!!M.semPasse||st.passe==='nenhum';
     $('#moldInfo').textContent=M.nome+' · perfil de '+virg(M.perfil)+' cm. '+M.desc;
@@ -318,12 +306,16 @@ function ligarProvador(){
   ['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('sobre')}));
   ['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('sobre')}));
   drop.addEventListener('drop',e=>carregarFoto(e.dataTransfer&&e.dataTransfer.files[0]));
-  $('#addPedido').addEventListener('click',()=>{const it=itemAtual();it.id=Date.now().toString(36);pedido.push(it);salvarPedido();avisar('Quadro adicionado ao pedido');abrirGaveta()});
+  $('#provFicha').addEventListener('click',()=>{
+    const c=cfgAtual();
+    setTimeout(()=>{if(preencherFicha)preencherFicha({w:c.w,h:c.h,desc:resumoFicha(),foto:st.arte==='sua'?fotoSua:null})},80);
+  });
 }
+let fotoSua=null;
 function carregarFoto(f){
   if(!f)return;if(!/^image\//.test(f.type)){avisar('Envie um arquivo de imagem, como JPG ou PNG.');return}
   const url=URL.createObjectURL(f),img=new Image();
-  img.onload=()=>{OBRAS.sua={src:url,r:img.naturalWidth/img.naturalHeight};$('#amostraSuaImg').src=url;const lab=$('#amostraSua');lab.hidden=false;lab.querySelector('input').checked=true;st.arte='sua';st.orient='auto';$$('input[name=orient]').forEach(i=>i.checked=i.value==='auto');atualizarProvador();avisar('Sua foto entrou na simulação')};
+  img.onload=()=>{fotoSua=f;OBRAS.sua={src:url,r:img.naturalWidth/img.naturalHeight};$('#amostraSuaImg').src=url;const lab=$('#amostraSua');lab.hidden=false;lab.querySelector('input').checked=true;st.arte='sua';st.orient='auto';$$('input[name=orient]').forEach(i=>i.checked=i.value==='auto');atualizarProvador();avisar('Sua foto entrou na simulação')};
   img.onerror=()=>avisar('Não foi possível abrir esta imagem. Tente um JPG ou PNG.');img.src=url;
 }
 
@@ -409,51 +401,14 @@ function ligarProjetos(){
   $('#adRange').addEventListener('input',e=>$('#ad').style.setProperty('--pos',e.target.value+'%'));
 }
 
-/* ================= pedido ================= */
-let pedido=memo.get('norart-pedido2',[]);if(!Array.isArray(pedido))pedido=[];
-let etapa='lista',dadosCk={nome:'',tel:'',entrega:'Retirar na loja (Asa Sul)'};
-function salvarPedido(){memo.set('norart-pedido2',pedido);const n=pedido.reduce((s,i)=>s+i.qtd,0),b=$('#pedidoN');b.textContent=n;b.dataset.n=n;b.classList.remove('pula');void b.offsetWidth;b.classList.add('pula')}
-const totalPedido=()=>pedido.reduce((s,it)=>s+it.preco*it.qtd,0);
+/* ================= utilidades de formulário ================= */
 function mascaraTel(v){const d=v.replace(/\D/g,'').slice(0,11);if(!d)return'';if(d.length<=2)return'('+d;if(d.length<=6)return'('+d.slice(0,2)+') '+d.slice(2);if(d.length<=10)return'('+d.slice(0,2)+') '+d.slice(2,6)+'-'+d.slice(6);return'('+d.slice(0,2)+') '+d.slice(2,7)+'-'+d.slice(7)}
-function renderPedido(){
-  const lista=$('#pedidoLista'),pe=$('#pedidoPe');
-  if(!pedido.length){lista.innerHTML='<div class="vazio"><b>Seu pedido está vazio.</b><p>Monte um quadro no provador e adicione aqui para comprar tudo de uma vez.</p><a class="btn btn--escuro btn--sm" href="#provador" data-fechar>Ir para o provador</a></div>';pe.innerHTML='';return}
-  lista.innerHTML=pedido.map(it=>'<article class="item" data-id="'+it.id+'"><img src="img/molduras/'+(it.mold||'filete')+'.jpg" alt=""><div><h3>'+esc(it.titulo)+'</h3><ul>'+it.linhas.map(l=>'<li>'+esc(l)+'</li>').join('')+'</ul><div class="item__linha"><div class="qtd"><button type="button" data-q="-1" aria-label="Diminuir quantidade">−</button><span>'+it.qtd+'</span><button type="button" data-q="1" aria-label="Aumentar quantidade">+</button></div><b>'+brl(it.preco*it.qtd)+'</b></div><button class="remover" type="button" data-rem>Remover</button></div></article>').join('');
-  const tot='<div class="gaveta__total"><span>Total estimado</span><b>'+brl(totalPedido())+'</b></div>';
-  if(etapa==='final'){
-    pe.innerHTML=tot+'<div class="final"><b>Pedido pronto para envio</b><p>Toque abaixo para abrir o WhatsApp da Norart com o pedido preenchido. A equipe confirma medidas, valor final e pagamento na conversa.</p><a class="btn btn--escuro btn--bloco" href="'+esc(zap(textoPedido(pedido,dadosCk)))+'" target="_blank" rel="noopener">'+ICO_ZAP+'Enviar pedido pelo WhatsApp</a><button class="btn btn--linha btn--sm" type="button" id="ckCopiar">Copiar resumo</button><button class="remover" type="button" id="ckVoltar">Voltar e editar dados</button></div>';return;
-  }
-  pe.innerHTML=tot+'<form class="checkout" id="checkout" novalidate><div class="campo"><label for="ckNome">Nome</label><input id="ckNome" autocomplete="name" value="'+esc(dadosCk.nome)+'"><span class="erro" id="ckNomeErro"></span></div><div class="campo"><label for="ckTel">WhatsApp</label><input id="ckTel" type="tel" inputmode="tel" autocomplete="tel" placeholder="(61) 90000-0000" value="'+esc(dadosCk.tel)+'"><span class="erro" id="ckTelErro"></span></div><fieldset class="pref"><legend>Entrega</legend><label class="op"><input type="radio" name="entrega" value="Retirar na loja (Asa Sul)"'+(dadosCk.entrega.indexOf('Retirar')===0?' checked':'')+'><span>Retirar na loja</span></label><label class="op"><input type="radio" name="entrega" value="Entrega e instalação em Brasília"'+(dadosCk.entrega.indexOf('Entrega')===0?' checked':'')+'><span>Entrega e instalação</span></label></fieldset><button class="btn btn--escuro btn--bloco" type="submit">Finalizar compra</button><p class="nota">A compra é concluída com a equipe pelo WhatsApp, depois de confirmar medidas, valores e pagamento.</p></form>';
-}
 function validar(campos){let ok=true,primeiro=null;campos.forEach(([el,er,teste,msg])=>{const ruim=!teste(el.value.trim());el.setAttribute('aria-invalid',ruim?'true':'false');el.setAttribute('aria-describedby',er.id);er.textContent=ruim?msg:'';if(ruim){ok=false;primeiro=primeiro||el}});if(primeiro)primeiro.focus();return ok}
 const telOk=v=>v.replace(/\D/g,'').length>=10;
-let focoAntes=null;
-function abrirGaveta(){const g=$('#gaveta');focoAntes=document.activeElement;etapa='lista';renderPedido();g.removeAttribute('inert');g.setAttribute('aria-hidden','false');g.classList.add('aberta');document.body.classList.add('trava');setTimeout(()=>{const b=$('.gaveta__cab .icone-btn');b&&b.focus()},60)}
-function fecharGaveta(){const g=$('#gaveta');if(!g.classList.contains('aberta'))return;g.classList.remove('aberta');g.setAttribute('aria-hidden','true');g.setAttribute('inert','');document.body.classList.remove('trava');if(focoAntes&&focoAntes.focus)focoAntes.focus({preventScroll:true})}
-function ligarPedido(){
-  const g=$('#gaveta');$('#abrirPedido').addEventListener('click',abrirGaveta);
-  g.addEventListener('click',e=>{
-    const t=e.target;if(t.closest('[data-fechar]')){fecharGaveta();return}
-    const art=t.closest('.item');
-    if(art){const it=pedido.find(i=>i.id===art.dataset.id);if(!it)return;const q=t.closest('[data-q]');if(q){it.qtd=clamp(it.qtd+(+q.dataset.q),1,20);salvarPedido();renderPedido();return}if(t.closest('[data-rem]')){pedido=pedido.filter(i=>i!==it);salvarPedido();renderPedido();return}}
-    if(t.id==='ckCopiar'){copiar(textoPedido(pedido,dadosCk));return}
-    if(t.id==='ckVoltar'){etapa='lista';renderPedido()}
-  });
-  g.addEventListener('input',e=>{if(e.target.id==='ckTel'&&(e.inputType||'').indexOf('delete')!==0)e.target.value=mascaraTel(e.target.value)});
-  g.addEventListener('submit',e=>{
-    if(e.target.id!=='checkout')return;e.preventDefault();
-    const nome=$('#ckNome'),tel=$('#ckTel');dadosCk.nome=nome.value.trim();dadosCk.tel=tel.value.trim();
-    const ent=$('input[name=entrega]:checked',g);dadosCk.entrega=ent?ent.value:dadosCk.entrega;
-    if(!validar([[nome,$('#ckNomeErro'),v=>v.length>1,'Informe seu nome.'],[tel,$('#ckTelErro'),telOk,'Informe um WhatsApp com DDD.']]))return;
-    etapa='final';renderPedido();const z=$('.final .btn--escuro',g);z&&z.focus();
-  });
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')fecharGaveta()});
-  salvarPedido();$('#pedidoN').classList.remove('pula');
-}
 
 /* ================= ficha de orçamento (formulário em etapas) ================= */
 const OBRA_VAZIA='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500"><defs><pattern id="l" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="14" stroke="#E4DCD0" stroke-width="2"/></pattern></defs><rect width="400" height="500" fill="#F3EEE7"/><rect width="400" height="500" fill="url(#l)"/><text x="200" y="258" text-anchor="middle" font-family="Jost,Arial,sans-serif" font-size="22" letter-spacing="8" fill="#A39788">SUA OBRA</text></svg>');
-let pintarFicha=null;
+let pintarFicha=null,preencherFicha=null;
 function ligarFicha(){
   const form=$('#orcForm'),ok=$('#orcOk'),trilho=$('#etapaTrilho'),etapas=$$('.etapa',form),total=etapas.length;
   const btnAv=$('#etapaAvancar'),btnVolta=$('#etapaVoltar'),barra=$('.etapas'),ficha=$('#ficha'),anexos=[];
@@ -578,6 +533,16 @@ function ligarFicha(){
     form.reset();anexos.splice(0).forEach(a=>URL.revokeObjectURL(a.url));renderAnexos(0);$$('.sug').forEach(b=>b.setAttribute('aria-pressed','false'));$('#descCont').textContent='0/600';$('.medidas').classList.remove('sem');inW.disabled=inH.disabled=false;
     feito=false;ficha.classList.remove('pronta');ok.hidden=true;form.hidden=false;etapas.forEach((f,i)=>f.hidden=i!==0);atual=1;atualizarEtapas();atualizarFicha();posicionarPilulas();
   });
+  let descAuto='';
+  preencherFicha=o=>{
+    if(feito){feito=false;ficha.classList.remove('pronta');ok.hidden=true;form.hidden=false;atualizarEtapas()}
+    if(o.w&&o.h){inW.value=o.w;inH.value=o.h;semMed.checked=false;$('.medidas').classList.remove('sem');inW.disabled=inH.disabled=false;$$('[data-passo]').forEach(b=>b.disabled=false)}
+    if(o.desc&&(!desc.value.trim()||desc.value===descAuto)){desc.value=o.desc.slice(0,600);descAuto=desc.value;desc.dispatchEvent(new Event('input',{bubbles:true}))}
+    if(o.foto&&anexos.length<8&&!anexos.some(a=>a.de===o.foto)){anexos.push({nome:o.foto.name||'Sua obra',url:URL.createObjectURL(o.foto),r:Math.round((Math.random()*8-4)*10)/10,de:o.foto});renderAnexos(1)}
+    const s=$('input[name=servico][value="Emoldurar obra ou fotografia"]',form);
+    if(s&&!s.checked){s.checked=true;s.dispatchEvent(new Event('change',{bubbles:true}))}else atualizarFicha();
+    avisar('Sua combinação já está na ficha');
+  };
   atualizarEtapas();atualizarFicha();
   requestAnimationFrame(posicionarPilulas);addEventListener('resize',posicionarPilulas);
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(posicionarPilulas);
@@ -597,7 +562,7 @@ const CTX={
   inicio:[MSG_GERAL,'Fale com a Norart'],
   produtos:['Olá, Norart! Vi os produtos no site e gostaria de um orçamento.','Orçar produtos'],
   produto:[()=>'Olá, Norart! Vi a moldura "'+(MOLD[prodAtual]||MOLDURAS[0]).nome+'" no site e gostaria de um orçamento.',()=>'Orçar '+(MOLD[prodAtual]||MOLDURAS[0]).nome],
-  provador:[()=>textoPedido([itemAtual()]),'Enviar esta simulação'],
+  provador:[textoSimulacao,'Orçar esta simulação'],
   projetos:['Olá, Norart! Vi os projetos no site e gostaria de algo parecido.','Quero um projeto assim'],
   sobre:[MSG_GERAL,'Fale com a Norart'],
   contato:['Olá, Norart! Gostaria de visitar a loja. Qual o melhor horário?','Agendar uma visita']
@@ -640,7 +605,6 @@ construirProvador();
 ligarProvador();
 ligarTeste();
 ligarProjetos();
-ligarPedido();
 ligarFicha();
 vigiarProvadorHome();
 statusLoja();setInterval(statusLoja,60000);
