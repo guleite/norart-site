@@ -63,20 +63,20 @@ const VIDROS_SERV=[
   ['Manutenção','Portas, molas hidráulicas, janelas e box.']
 ];
 const PROJETOS=[
-  {img:'img/real/proj-exposicao.jpg',titulo:'Exposição artística',tags:'molduras corporativo',cls:'',cat:'Molduras · Exposição',texto:'Obras de uma mostra emolduradas e montadas com alinhamento e espaçamento planejados para o percurso do visitante.',produto:'Molduras e montagem de exposição',acab:'Molduras em madeira, alinhamento',amb:'Galeria'},
-  {img:'img/real/obj-colecao.jpg',titulo:'Coleção de lembranças',tags:'molduras residencial',cls:'obra--alta',cat:'Molduras · Colecionáveis',texto:'Ingressos, broches e miniaturas de viagem organizados em uma caixa preta profunda com vidro.',produto:'Caixa preta profunda',acab:'Fundo preto, vidro',amb:'Residencial'},
-  {img:'img/real/proj-colecionador.jpg',titulo:'Camisa olímpica entre vidros',tags:'molduras residencial',cls:'',cat:'Molduras · Colecionador',texto:'Peça de coleção montada entre vidros em moldura branca, para preservar e destacar a camisa.',produto:'Moldura com vidro duplo',acab:'Moldura branca, vidro',amb:'Residencial'},
-  {img:'img/real/proj-residencial.jpg',titulo:'Pintura na sala',tags:'molduras residencial',cls:'',cat:'Molduras · Residencial',texto:'Pintura de cores intensas em caixa preta, que dá contorno à obra sem disputar atenção.',produto:'Caixa preta',acab:'Moldura caixa, sem vidro',amb:'Residencial'},
-  {img:'img/real/proj-corporativo.jpg',titulo:'Díptico no escritório',tags:'molduras corporativo',cls:'',cat:'Molduras · Corporativo',texto:'Duas fotografias de árvores em molduras de madeira clara, alinhadas como um único painel.',produto:'Molduras em madeira clara',acab:'Passe-partout branco, vidro',amb:'Ambiente corporativo'},
-  {img:'img/real/obj-cocar.jpg',titulo:'Objeto afetivo',tags:'molduras residencial',cls:'obra--alta',cat:'Molduras · Objetos',texto:'Peças artesanais fixadas sobre fundo claro em caixa de madeira, com profundidade para o volume.',produto:'Caixa em madeira',acab:'Fundo off-white',amb:'Residencial'},
-  {img:'img/real/proj-fotografia.jpg',titulo:'Obra autoral',tags:'molduras',cls:'',cat:'Molduras · Obra autoral',texto:'Obra recebendo moldura clara na loja, conferida peça por peça antes da entrega.',produto:'Moldura em madeira clara',acab:'Acabamento natural',amb:'Loja Norart'},
-  {img:'img/real/obj-gravura-preta.jpg',titulo:'Gravura em relevo',tags:'molduras residencial',cls:'',cat:'Molduras · Gravura',texto:'Gravura com relevo em moldura preta e passe-partout branco, que valoriza sombras e recortes.',produto:'Moldura preta com passe-partout',acab:'Passe-partout branco',amb:'Residencial'},
-  {img:'img/proj-quarto.jpg',titulo:'Fotografia do ipê no quarto',tags:'molduras residencial',cls:'obra--larga',cat:'Molduras · Residencial',texto:'Fotografia de paisagem do cerrado em moldura fina de madeira clara, sobre a cabeceira.',produto:'Moldura Freijó Natural',acab:'Madeira natural, vidro antirreflexo',amb:'Residencial'},
-  {img:'img/proj-espelho-arco.jpg',titulo:'Espelho em arco',tags:'vidros residencial',cls:'obra--alta',cat:'Espelhos · Residencial',texto:'Espelho de chão em arco com moldura metálica fina, apoiado na parede para ampliar a sala.',produto:'Espelho com moldura',acab:'Moldura metálica preta',amb:'Residencial'},
-  {img:'img/real/obj-gravura-ave.jpg',titulo:'Gravura minimalista',tags:'molduras residencial',cls:'',cat:'Molduras · Gravura',texto:'Gravura delicada com muito respiro, em moldura fina de madeira.',produto:'Moldura fina em madeira',acab:'Fundo branco amplo',amb:'Residencial'},
-  {img:'img/cat-espelhos.jpg',titulo:'Espelho orgânico no lavabo',tags:'vidros residencial',cls:'obra--alta',cat:'Espelhos · Residencial',texto:'Espelho de formato livre com iluminação de LED por trás, desenhado para a bancada.',produto:'Espelho orgânico',acab:'LED embutido',amb:'Residencial'},
-  {img:'img/proj-escritorio.jpg',titulo:'Trio botânico',tags:'molduras residencial corporativo',cls:'obra--larga',cat:'Molduras · Escritório',texto:'Três gravuras botânicas em caixa preta com passe-partout branco largo, alinhadas sobre a mesa.',produto:'Caixa Preta Fosca',acab:'Passe-partout branco 6 cm',amb:'Escritório'},
-  {img:'img/proj-tampo.jpg',titulo:'Tampo de vidro',tags:'vidros residencial',cls:'',cat:'Vidros · Residencial',texto:'Vidro temperado com borda lapidada, cortado na medida do tampo para proteger a madeira.',produto:'Tampo de vidro temperado',acab:'Borda lapidada e polida',amb:'Sala de jantar'}
+  {img:'img/real/proj-exposicao.jpg',r:1.2432,titulo:'Exposição artística',tags:'molduras corporativo',cls:'obra--larga',cat:'Molduras · Exposição',texto:'Obras de uma mostra emolduradas e montadas com alinhamento e espaçamento planejados para o percurso do visitante.',produto:'Molduras e montagem de exposição',acab:'Molduras em madeira, alinhamento',amb:'Galeria'},
+  {img:'img/real/obj-colecao.jpg',r:0.6717,titulo:'Coleção de lembranças',tags:'molduras residencial',cls:'',cat:'Molduras · Colecionáveis',texto:'Ingressos, broches e miniaturas de viagem organizados em uma caixa preta profunda com vidro.',produto:'Caixa preta profunda',acab:'Fundo preto, vidro',amb:'Residencial'},
+  {img:'img/real/proj-colecionador.jpg',r:0.7222,titulo:'Camisa olímpica entre vidros',tags:'molduras residencial',cls:'',cat:'Molduras · Colecionador',texto:'Peça de coleção montada entre vidros em moldura branca, para preservar e destacar a camisa.',produto:'Moldura com vidro duplo',acab:'Moldura branca, vidro',amb:'Residencial'},
+  {img:'img/real/proj-residencial.jpg',r:1.2451,titulo:'Pintura na sala',tags:'molduras residencial',cls:'',cat:'Molduras · Residencial',texto:'Pintura de cores intensas em caixa preta, que dá contorno à obra sem disputar atenção.',produto:'Caixa preta',acab:'Moldura caixa, sem vidro',amb:'Residencial'},
+  {img:'img/real/obj-cocar.jpg',r:0.5469,titulo:'Objeto afetivo',tags:'molduras residencial',cls:'',cat:'Molduras · Objetos',texto:'Peças artesanais fixadas sobre fundo claro em caixa de madeira, com profundidade para o volume.',produto:'Caixa em madeira',acab:'Fundo off-white',amb:'Residencial'},
+  {img:'img/real/proj-fotografia.jpg',r:1.2382,titulo:'Obra autoral',tags:'molduras',cls:'',cat:'Molduras · Obra autoral',texto:'Obra recebendo moldura clara na loja, conferida peça por peça antes da entrega.',produto:'Moldura em madeira clara',acab:'Acabamento natural',amb:'Loja Norart'},
+  {img:'img/real/proj-corporativo.jpg',r:1.2403,titulo:'Díptico no escritório',tags:'molduras corporativo',cls:'obra--larga',cat:'Molduras · Corporativo',texto:'Duas fotografias de árvores em molduras de madeira clara, alinhadas como um único painel.',produto:'Molduras em madeira clara',acab:'Passe-partout branco, vidro',amb:'Ambiente corporativo'},
+  {img:'img/proj-quarto.jpg',r:1.3273,titulo:'Fotografia do ipê no quarto',tags:'molduras residencial',cls:'obra--larga',cat:'Molduras · Residencial',texto:'Fotografia de paisagem do cerrado em moldura fina de madeira clara, sobre a cabeceira.',produto:'Moldura Freijó Natural',acab:'Madeira natural, vidro antirreflexo',amb:'Residencial'},
+  {img:'img/real/obj-gravura-preta.jpg',r:0.8019,titulo:'Gravura em relevo',tags:'molduras residencial',cls:'',cat:'Molduras · Gravura',texto:'Gravura com relevo em moldura preta e passe-partout branco, que valoriza sombras e recortes.',produto:'Moldura preta com passe-partout',acab:'Passe-partout branco',amb:'Residencial'},
+  {img:'img/proj-espelho-arco.jpg',r:0.8,titulo:'Espelho em arco',tags:'vidros residencial',cls:'',cat:'Espelhos · Residencial',texto:'Espelho de chão em arco com moldura metálica fina, apoiado na parede para ampliar a sala.',produto:'Espelho com moldura',acab:'Moldura metálica preta',amb:'Residencial'},
+  {img:'img/real/obj-gravura-ave.jpg',r:0.9619,titulo:'Gravura minimalista',tags:'molduras residencial',cls:'',cat:'Molduras · Gravura',texto:'Gravura delicada com muito respiro, em moldura fina de madeira.',produto:'Moldura fina em madeira',acab:'Fundo branco amplo',amb:'Residencial'},
+  {img:'img/cat-espelhos.jpg',r:0.8,titulo:'Espelho orgânico no lavabo',tags:'vidros residencial',cls:'',cat:'Espelhos · Residencial',texto:'Espelho de formato livre com iluminação de LED por trás, desenhado para a bancada.',produto:'Espelho orgânico',acab:'LED embutido',amb:'Residencial'},
+  {img:'img/proj-escritorio.jpg',r:1.3273,titulo:'Trio botânico',tags:'molduras residencial corporativo',cls:'obra--larga',cat:'Molduras · Escritório',texto:'Três gravuras botânicas em caixa preta com passe-partout branco largo, alinhadas sobre a mesa.',produto:'Caixa Preta Fosca',acab:'Passe-partout branco 6 cm',amb:'Escritório'},
+  {img:'img/proj-tampo.jpg',r:1.34,titulo:'Tampo de vidro',tags:'vidros residencial',cls:'',cat:'Vidros · Residencial',texto:'Vidro temperado com borda lapidada, cortado na medida do tampo para proteger a madeira.',produto:'Tampo de vidro temperado',acab:'Borda lapidada e polida',amb:'Sala de jantar'}
 ];
 
 /* ================= moldura real (border-image) ================= */
@@ -377,9 +377,37 @@ function pintarProduto(){
 function ligarProjetos(){
   const lb=$('#lightbox');let atual=null;
   const obras=()=>$$('#gradeProj .obra');
+  /* Linhas justificadas: cada foto mantém a proporção original (nada é cortado) e cada linha
+     preenche a largura inteira. As quebras de linha são escolhidas para que todas as linhas
+     fiquem o mais perto possível da altura-alvo. */
+  const proporcao=o=>{const im=o.querySelector('img');return im.naturalWidth?im.naturalWidth/im.naturalHeight:(PROJETOS[+o.dataset.i].r||1)};
+  const arrumarGrade=()=>{
+    const g=$('#gradeProj'),cs=getComputedStyle(g);
+    const W=g.getBoundingClientRect().width-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight)-1;if(W<=0)return;
+    const gap=parseFloat(cs.columnGap)||0,alvo=W<700?Math.max(190,W*.62):clamp(W*.27,260,360);
+    const vis=obras().filter(o=>!o.hidden),a=vis.map(proporcao),n=a.length,custo=[0],corte=[0];
+    for(let j=1;j<=n;j++){
+      custo[j]=Infinity;let soma=0;
+      for(let i=j-1;i>=0;i--){
+        soma+=a[i];const h=(W-gap*(j-i-1))/soma;
+        if(h<alvo*.5&&i<j-1)break;
+        const c=custo[i]+Math.pow(Math.log(h/alvo),2);
+        if(c<custo[j]){custo[j]=c;corte[j]=i}
+      }
+    }
+    for(let j=n;j>0;j=corte[j]){
+      const i=corte[j];let soma=0;for(let k=i;k<j;k++)soma+=a[k];
+      const h=(W-gap*(j-i-1))/soma;
+      for(let k=i;k<j;k++){const o=vis[k];o.style.height=h+'px';o.style.width=Math.floor(a[k]*h*100)/100-.02+'px';o.style.flexGrow=a[k]}
+    }
+  };
+  arrumarGrade();
+  if('ResizeObserver' in window)new ResizeObserver(arrumarGrade).observe($('#gradeProj'));else addEventListener('resize',arrumarGrade);
+  $('#gradeProj').addEventListener('load',e=>{if(e.target.tagName!=='IMG')return;const o=e.target.closest('.obra'),r=PROJETOS[+o.dataset.i].r;if(r&&Math.abs(proporcao(o)/r-1)>.01)arrumarGrade()},true);
   $$('[data-vista="projetos"] .filtro').forEach(b=>b.addEventListener('click',()=>{
     $$('[data-vista="projetos"] .filtro').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
     const f=b.dataset.f;obras().forEach(o=>{o.hidden=!(f==='todos'||o.dataset.tags.split(' ').includes(f))});
+    arrumarGrade();
   }));
   const preencher=o=>{
     atual=o;const p=PROJETOS[+o.dataset.i],li=$('#lbImg');
