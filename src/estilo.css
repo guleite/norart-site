@@ -86,11 +86,8 @@ em,.serif{font-family:var(--ff-serif);font-style:italic;font-weight:400;letter-s
 .icone-btn svg{width:18px;height:18px}
 
 /* ---------- Logo ---------- */
-.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--texto)}
-.marca .simbolo{width:38px;height:38px;flex:none}
-.marca .palavra{display:grid;gap:5px}
-.marca .palavra svg{height:15px;width:auto}
-.marca .palavra small{font-size:.58rem;letter-spacing:.12em;color:var(--texto-2);line-height:1}
+.marca{display:flex;align-items:center;text-decoration:none;color:var(--texto)}
+.marca__logo{display:block;height:50px;width:auto;max-width:none}
 
 /* ---------- Topo ---------- */
 .topo{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:transform .5s var(--ease),background-color .4s,box-shadow .4s}
@@ -111,7 +108,7 @@ em,.serif{font-family:var(--ff-serif);font-style:italic;font-weight:400;letter-s
 .menu-btn.x span:last-child{transform:translateY(-3px) rotate(-45deg)}
 @media (max-width:1080px){.menu{display:none}.menu-btn{display:flex;flex-direction:column;align-items:center;justify-content:center}}
 @media (max-width:700px){.topo__cta{display:none}}
-@media (max-width:640px){:root{--topo-h:64px}.marca .simbolo{width:32px;height:32px}.marca .palavra svg{height:12px}.marca .palavra small{display:none}}
+@media (max-width:640px){:root{--topo-h:64px}.topo .marca__logo{height:42px}}
 .menu-mobile{position:fixed;inset:0;z-index:45;display:flex;flex-direction:column;gap:4px;padding:calc(var(--topo-h) + env(safe-area-inset-top,0px) + 30px) max(var(--gx),env(safe-area-inset-right,0px)) calc(32px + env(safe-area-inset-bottom,0px)) max(var(--gx),env(safe-area-inset-left,0px));background:var(--fundo);overflow-y:auto}
 .menu-mobile a:not(.btn){display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid var(--linha);font-size:clamp(1.8rem,8vw,2.6rem);font-weight:300;line-height:1.2;text-decoration:none}
 .menu-mobile a small{font-size:.7rem;letter-spacing:.2em;color:var(--texto-3)}
@@ -552,7 +549,7 @@ html.anima.pronto .destaque{opacity:1;transform:none}
 /* ---------- Rodapé ---------- */
 .rodape{background:var(--marrom-esc);color:#E9E1D6;padding-block:clamp(64px,8vw,104px) calc(30px + env(safe-area-inset-bottom,0px));color-scheme:dark}
 .rodape .marca{color:#F3EEE7}
-.rodape .marca .palavra small{color:#B9AA98}
+.rodape .marca__logo{height:68px}
 .rodape__topo{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:40px}
 .rodape__frase{margin:22px 0 0;font-family:var(--ff-serif);font-style:italic;font-size:1.35rem;line-height:1.35;color:#D8CBBA;max-width:24ch}
 .rodape h3{font-size:.66rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#A8998A;margin-bottom:16px}

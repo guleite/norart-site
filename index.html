@@ -126,11 +126,8 @@ em,.serif{font-family:var(--ff-serif);font-style:italic;font-weight:400;letter-s
 .icone-btn svg{width:18px;height:18px}
 
 /* ---------- Logo ---------- */
-.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--texto)}
-.marca .simbolo{width:38px;height:38px;flex:none}
-.marca .palavra{display:grid;gap:5px}
-.marca .palavra svg{height:15px;width:auto}
-.marca .palavra small{font-size:.58rem;letter-spacing:.12em;color:var(--texto-2);line-height:1}
+.marca{display:flex;align-items:center;text-decoration:none;color:var(--texto)}
+.marca__logo{display:block;height:50px;width:auto;max-width:none}
 
 /* ---------- Topo ---------- */
 .topo{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:transform .5s var(--ease),background-color .4s,box-shadow .4s}
@@ -151,7 +148,7 @@ em,.serif{font-family:var(--ff-serif);font-style:italic;font-weight:400;letter-s
 .menu-btn.x span:last-child{transform:translateY(-3px) rotate(-45deg)}
 @media (max-width:1080px){.menu{display:none}.menu-btn{display:flex;flex-direction:column;align-items:center;justify-content:center}}
 @media (max-width:700px){.topo__cta{display:none}}
-@media (max-width:640px){:root{--topo-h:64px}.marca .simbolo{width:32px;height:32px}.marca .palavra svg{height:12px}.marca .palavra small{display:none}}
+@media (max-width:640px){:root{--topo-h:64px}.topo .marca__logo{height:42px}}
 .menu-mobile{position:fixed;inset:0;z-index:45;display:flex;flex-direction:column;gap:4px;padding:calc(var(--topo-h) + env(safe-area-inset-top,0px) + 30px) max(var(--gx),env(safe-area-inset-right,0px)) calc(32px + env(safe-area-inset-bottom,0px)) max(var(--gx),env(safe-area-inset-left,0px));background:var(--fundo);overflow-y:auto}
 .menu-mobile a:not(.btn){display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid var(--linha);font-size:clamp(1.8rem,8vw,2.6rem);font-weight:300;line-height:1.2;text-decoration:none}
 .menu-mobile a small{font-size:.7rem;letter-spacing:.2em;color:var(--texto-3)}
@@ -592,7 +589,7 @@ html.anima.pronto .destaque{opacity:1;transform:none}
 /* ---------- Rodapé ---------- */
 .rodape{background:var(--marrom-esc);color:#E9E1D6;padding-block:clamp(64px,8vw,104px) calc(30px + env(safe-area-inset-bottom,0px));color-scheme:dark}
 .rodape .marca{color:#F3EEE7}
-.rodape .marca .palavra small{color:#B9AA98}
+.rodape .marca__logo{height:68px}
 .rodape__topo{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:40px}
 .rodape__frase{margin:22px 0 0;font-family:var(--ff-serif);font-style:italic;font-size:1.35rem;line-height:1.35;color:#D8CBBA;max-width:24ch}
 .rodape h3{font-size:.66rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#A8998A;margin-bottom:16px}
@@ -904,13 +901,7 @@ html.anima .manifesto__in.visto .circulo path{stroke-dashoffset:0}
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <linearGradient id="gOuro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8F6A36"/><stop offset=".45" stop-color="#D8B87F"/><stop offset="1" stop-color="#A47E45"/></linearGradient>
-    <symbol id="simbolo" viewBox="0 0 100 100">
-      <path d="M6 27V6h21M73 6h21v21M94 73v21H73M27 94H6V73" fill="none" stroke="url(#gOuro)" stroke-width="4.5"/>
-      <path d="M28 77V38Q28 23 42 23L54 77Z" fill="currentColor"/>
-      <path d="M72 23V62Q72 77 58 77L46 23Z" fill="url(#gOuro)"/>
-    </symbol>
-    <symbol id="palavra" viewBox="0 -1 104 18"><g fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="miter"><path d="M1 16V0l12 16V0"/><circle cx="27" cy="8" r="7.6"/><path d="M41 16V0h6.2a4.4 4.4 0 0 1 0 8.8H41M46.5 8.8L53 16"/><path d="M57 16L64 0l7 16"/><path d="M75 16V0h6.2a4.4 4.4 0 0 1 0 8.8H75M80.5 8.8L87 16"/><path d="M90 0.7h13M96.5 0.7V16"/></g></symbol>
+    <symbol id="simbolo" viewBox="0 0 100 100"><image href="img/logo-simbolo.png" width="100" height="100"/></symbol>
     <symbol id="i-seta" viewBox="0 0 16 16"><path d="M4 12L12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
     <symbol id="i-zap" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.5 10.5 0 0 1-1.8-6C5 9.7 9.9 4.9 16 4.9s11 4.8 11 10.8-4.9 10.7-11 10.7zm6-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-1.8-1-2.5-.3-.7-.5-.6-.8-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.4z"/></symbol>
     <symbol id="i-quadro" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="8" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
@@ -925,8 +916,7 @@ html.anima .manifesto__in.visto .circulo path{stroke-dashoffset:0}
 <header class="topo" id="topo">
   <div class="wrap topo__in">
     <a class="marca" href="#inicio" aria-label="Norart Molduras, vidros e decoração, página inicial">
-      <svg class="simbolo" aria-hidden="true"><use href="#simbolo"/></svg>
-      <span class="palavra"><svg viewBox="0 -1 104 18" aria-hidden="true"><use href="#palavra"/></svg><small>molduras, vidros e decoração</small></span>
+      <img class="marca__logo" src="img/logo-norart.png" width="842" height="247" alt="">
     </a>
     <nav class="menu" aria-label="Principal">
       <a href="#inicio" data-nav="inicio">Início</a>
@@ -1667,7 +1657,7 @@ html.anima .manifesto__in.visto .circulo path{stroke-dashoffset:0}
   <div class="wrap">
     <div class="rodape__topo">
       <div>
-        <a class="marca" href="#inicio" aria-label="Norart, página inicial"><svg class="simbolo" aria-hidden="true"><use href="#simbolo"/></svg><span class="palavra"><svg viewBox="0 -1 104 18" aria-hidden="true"><use href="#palavra"/></svg><small>molduras, vidros e decoração</small></span></a>
+        <a class="marca" href="#inicio" aria-label="Norart, página inicial"><img class="marca__logo" src="img/logo-norart-clara.png" width="842" height="247" alt="" loading="lazy"></a>
         <p class="rodape__frase">Sua obra merece uma moldura à altura.</p>
       </div>
       <div><h3>Navegue</h3><ul><li><a href="#produtos">Produtos</a></li><li><a href="#provador">Provador de molduras</a></li><li><a href="#projetos">Projetos</a></li><li><a href="#sobre">Sobre a Norart</a></li></ul></div>
